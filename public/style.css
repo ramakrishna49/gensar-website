@@ -7369,6 +7369,11 @@ body.legal-page .section-padding {
     flex: 1 0 auto;
 }
 
+body.legal-page .footer-premium {
+    flex-shrink: 0;
+    width: 100%;
+}
+
 /* ===== BREAKPOINT: SMALL MOBILE (≤ 480px) ===== */
 @media (max-width: 480px) {
     .hero-content h1 {
