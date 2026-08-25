@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon-16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your hiring requirements with Gensar - IT Services, Non-IT Services & Staffing Solutions. We connect you with skilled professionals matching your business needs. Inventing Better Future.">
+    <meta name="keywords" content="share requirement, hire talent, recruitment, staffing, IT services, non-IT services, job requirements, Gensar, industry consulting, shine with gensar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Share Your Requirement - Gensar | IT, Non-IT & Staffing Solutions">
+    <meta property="og:description" content="Share your hiring requirements with Gensar - IT Services, Non-IT Services & Staffing Solutions.">
+    <meta property="og:image" content="img/gensar_logo.png">
+    <meta property="og:type" content="website">
+    <title>Share Your Requirement - Gensar | IT, Non-IT & Staffing Solutions</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .requirement-form-section {
+            padding: 100px 0;
+            background: #f8f6f3;
+        }
+
+        .requirement-wrapper {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        /* LEFT SIDE */
+
+        .requirement-left {
+            position: sticky;
+            top: 120px;
+            text-align: center;
+            height: fit-content;
+            position: relative;
+            isolation: isolate;
+            padding: 30px;
+
+        }
+
+        .requirement-left::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('img/build.jpeg') center center/cover no-repeat;
+            opacity: .2;
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        .requirement-left img {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .requirement-left > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .requirement-left h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #a061e4;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .requirement-left .divider {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .requirement-left p {
+            font-size: .95rem;
+            line-height: 1.8;
+            color: #000000;
+        }
+
+        /* RIGHT SIDE */
+
+        .requirement-right {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .05);
+        }
+
+        .requirement-right h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: .9rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #d8d8d8;
+            border-radius: 10px;
+            padding: 13px 16px;
+            font-size: .9rem;
+            transition: .3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #b58ae3;
+            box-shadow: 0 0 0 4px rgba(181, 138, 227, .15);
+        }
+
+        .error-msg {
+            display: block;
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .checkbox-wrapper label {
+            font-size: .85rem;
+            color: #555;
+        }
+
+        .checkbox-error {
+            display: block;
+            color: #dc3545;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .submit-btn {
+            border: none;
+            margin-top: 25px;
+            padding: 14px 35px;
+            border-radius: 10px;
+
+            background: linear-gradient(135deg,
+                    #b58ae3,
+                    #a0b5f0);
+
+            color: #fff;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        #successMessage {
+            display: none;
+            margin-top: 20px;
+            color: #B58AE3;
+            font-weight: 600;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:991px) {
+
+            .requirement-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .requirement-left {
+                position: static;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .requirement-right {
+                padding: 25px;
+            }
+
+            .requirement-right h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        .requirement-features {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .04);
+        }
+
+        .feature-item i {
+            color: #b58ae3;
+            font-size: 1.1rem;
+        }
+
+        .feature-item span {
+            font-size: .9rem;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .stats-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg,
+                    #b58ae3,
+                    #a0b5f0);
+            color: #fff;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            font-size: .85rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .clients-section {
+            background: #1a1a2e;
+            background: var(--bg-dark-primary);
+            overflow: hidden;
+        }
+
+        /* Heading */
+
+        .clients-heading {
+            margin-bottom: 50px;
+        }
+
+        .clients-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .clients-title span {
+            background: linear-gradient(135deg,
+                    var(--color-primary),
+                    var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            display: block;
+            color: var(--color-primary);
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* Logo Marquee */
+
+        .clients-marquee {
+            overflow: hidden;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            width: max-content;
+            animation: logoScroll 25s linear infinite;
+        }
+
+        .clients-track img {
+            height: 55px;
+            width: auto;
+            opacity: 1;
+            filter: grayscale(0%);
+            transition: .4s;
+        }
+
+        .clients-track img:hover {
+            opacity: 1;
+            filter: none;
+            transform: scale(1.1);
+        }
+
+        @keyframes logoScroll {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px) {
+
+            .clients-title {
+                font-size: 2.2rem;
+            }
+
+            .clients-track {
+                gap: 50px;
+            }
+
+            .clients-track img {
+                height: 40px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/gensar_logo.png" alt="Gensar Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list" id="menuIcon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our-services.html">Services</a>
+                    </li>
+                    <!-- Consulting Dropdown Menu -->
+                   <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="gensar-consulting.html" role="button" data-bs-toggle="dropdown">Internship</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gensar-consulting.html#ai-ml" data-course-select="ai-ml">AI & ML</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-science" data-course-select="data-science">Data Science</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-analytics" data-course-select="data-analytics">Data Analytics</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#cyber-security" data-course-select="cyber-security">Cyber Security</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#full-stack" data-course-select="full-stack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hire-us.html">Find Talent</a>
+                    </li>
+                </ul>
+                <a href="get-in-touch.html" class="contact-btn">
+                    <i class="bi bi-send-fill me-2"></i>Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="requirement-form-section" id="requirement-form">
+
+        <div class="container anim-fade from-left">
+
+            <div class="requirement-wrapper">
+
+                <!-- LEFT SIDE -->
+
+                <div class="requirement-left">
+
+
+
+                    <h3>Let's Build Your Team</h3>
+                    <div class="divider"></div>
+
+                    <p>
+                        Share your hiring requirements and our experts
+                        will connect with you within 24 hours.
+                    </p>
+
+                    <div class="requirement-features anim-fade from-left">
+
+                        <div class="feature-item delay-100">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pre-screened Industry Professionals</span>
+                        </div>
+
+                        <div class="feature-item delay-200">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fast Hiring & Placement Process</span>
+                        </div>
+
+                        <div class="feature-item delay-300">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>AI, Cyber Security & IT Experts</span>
+                        </div>
+
+                        <div class="feature-item delay-300">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Dedicated Recruitment Support</span>
+                        </div>
+
+                    </div>
+
+                    <div class="stats-card anim-fade from-left">
+
+                        <div class="stat-box delay-100">
+                            <h4>500+</h4>
+                            <p>Professionals Placed</p>
+                        </div>
+
+                        <div class="stat-box delay-200">
+                            <h4>100+</h4>
+                            <p>Partner Companies</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="requirement-right">
+
+                    <h2>Share Your Requirement</h2>
+                    <div class="divider"></div>
+
+
+                    <form id="requirementForm">
+
+                        <div class="form-grid">
+
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" id="reqName" placeholder="Enter your full name">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- Company -->
+                            <div class="form-group">
+                                <label>Company Name *</label>
+                                <input type="text" id="reqCompany" placeholder="Enter company name">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="reqEmail" placeholder="Enter email address">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- Contact -->
+                            <div class="form-group">
+                                <label>Contact Number *</label>
+                                <input type="tel" id="reqPhone" placeholder="Enter contact number" inputmode="numeric" pattern="[0-9+\-() ]+">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- Designation -->
+                            <div class="form-group">
+                                <label>Designation *</label>
+                                <input type="text" id="reqDesignation" placeholder="e.g. HR Manager">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- No of Openings -->
+                            <div class="form-group">
+                                <label>No. of Openings *</label>
+                                <input type="number" id="reqOpenings" placeholder="Enter number of openings">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <!-- Experience -->
+                            <div class="form-group">
+                                <label>Experience Required *</label>
+
+                                <select id="reqExperience">
+
+                                    <option value="">Select Experience</option>
+
+                                    <option>Fresher</option>
+                                    <option>0 - 1 Year</option>
+                                    <option>1 - 2 Years</option>
+                                    <option>2 - 3 Years</option>
+                                    <option>3 - 5 Years</option>
+                                    <option>5 - 8 Years</option>
+                                    <option>8+ Years</option>
+
+                                </select>
+
+                                <small class="error-msg"></small>
+                            </div>
+                            <!-- Upload JD -->
+                            <div class="form-group">
+                                <label>Upload Job Description (JD)</label>
+
+                                <input type="file" id="reqFile" accept=".pdf,.doc,.docx">
+
+                                <small class="error-msg"></small>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Additional Requirements -->
+                        <div class="form-group">
+                            <label>Additional Requirements</label>
+
+                            <textarea rows="5" id="reqMessage"
+                                placeholder="Mention skills, technologies, location, notice period, or any additional hiring requirements..."></textarea>
+
+                            <small class="error-msg"></small>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="checkbox-wrapper">
+
+                            <input type="checkbox" id="agreeCheck">
+
+                            <label for="agreeCheck">
+                                I agree to the Privacy Policy and Terms & Conditions.
+                            </label>
+
+                        </div>
+
+                        <small class="checkbox-error"></small>
+
+                        <button type="submit" class="submit-btn">
+                            Submit Requirement
+                        </button>
+
+                        <div id="successMessage">
+                            Thank you! Your requirement has been submitted successfully.
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="clients-section">
+
+        <div class="container anim-fade from-right">
+
+            <div class="text-center clients-heading anim-fade from-right">
+
+                <span class="section-subtitle">
+                    TRUSTED BY LEADING COMPANIES
+                </span>
+
+                <div class="section-heading-wrapper">
+                    <h2 class="clients-title">
+                        Our Top <span class="text-gradient-purple">Clients</span>
+                    </h2>
+                    <div class="divider"></div>
+                </div>
+
+            </div>
+
+            <!-- Logos -->
+
+            <div class="clients-marquee">
+                <div class="clients-track" id="shareLogosTrack"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer-premium">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+
+                        <img src="img/Gensar Main Logo 2400x1800.jpg.jpeg" alt="Gensar IT Solution" class="footer-logo">
+
+                        <p class="footer-about">
+                            Gensar IT Solution empowers businesses with innovative IT solutions,
+                            staffing services, corporate training, and digital transformation
+                            strategies that drive measurable growth and long-term success. We also
+                            provide comprehensive Non-IT business services including BPO, KPO,
+                            healthcare operations, customer experience solutions, and back-office
+                            processing to streamline your business operations.
+                        </p>
+
+                        <div class="footer-social" style="text-align:center;">
+                            <a href="https://www.linkedin.com/company/gensar-group/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/gensar_group/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 footer-quick-links">
+                    <h5 class="footer-title">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="gensar-consulting.html">Courses</a></li>
+                        <li><a href="gensar-consulting.html">Internship</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="hire-us.html">Find Talent</a></li>
+                        <li><a href="get-in-touch.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 footer-services">
+                    <h5 class="footer-title">Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="our-services.html">IT Solutions</a></li>
+                        <li><a href="our-services.html">Non-IT Services</a></li>
+                        <li><a href="hire-us.html">Staffing Solutions</a></li>
+                        <li><a href="gensar-consulting.html">Corporate Training</a></li>
+                        <li><a href="gensar-consulting.html">AI & Data Services</a></li>
+                        <li><a href="gensar-consulting.html">Cyber Security</a></li>
+                        <li><a href="gensar-consulting.html">Cloud Services</a></li>
+                        <li><a href="gensar-consulting.html">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations -->
+                <div class="col-lg-3 col-md-6 footer-services">
+                    <h5 class="footer-title">Our Locations</h5>
+
+                    <div class="footer-location">
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Hyderabad</strong>
+                            Manjeera Trinity, 402, 4th floor, KPHB, Hyderabad – 500072
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Bangalore</strong>
+                            #824, 1st Block HRBR Layout,
+                            5th A Cross, Kalyan Nagar, Bangalore,
+                            Karnataka -560043
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>USA</strong>
+                            1760 Reston Parkway, Reston, VA 20190, USA
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Dubai</strong>
+                            Prime Business centre- AI Barsha South Fourth- Jumeirah Village Circle- Dubai- United Arab
+                            Emirates
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h4>Stay Updated With Gensar</h4>
+                        <p>Get updates on services, hiring opportunities, and training programs.</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form class="newsletter-form">
+                            <input type="text" class="newsletter-name" placeholder="Your name" pattern="[a-zA-Z\s.'-]+" title="Letters only">
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+
+                    <p>
+                        © 2026 Gensar IT Solution. All Rights Reserved.
+                    </p>
+
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("requirementForm");
+        if (!form) return;
+
+        form.addEventListener("submit", async function (e) {
+
+            e.preventDefault();
+
+            let valid = true;
+
+            document.querySelectorAll(".error-msg")
+                .forEach(el => el.innerText = "");
+
+            document.querySelector(".checkbox-error").innerText = "";
+
+            let firstInvalid = null;
+
+            function showError(id, msg) {
+
+                document
+                    .getElementById(id)
+                    .parentElement
+                    .querySelector(".error-msg")
+                    .innerText = msg;
+
+                valid = false;
+                if (!firstInvalid) firstInvalid = document.getElementById(id);
+            }
+
+            const name = document.getElementById("reqName");
+            const openings = document.getElementById("reqOpenings");
+            const email = document.getElementById("reqEmail");
+            const phone = document.getElementById("reqPhone");
+            const designation = document.getElementById("reqDesignation");
+            const company = document.getElementById("reqCompany");
+            const experience = document.getElementById("reqExperience");
+            const agree = document.getElementById("agreeCheck");
+
+            const nameRegex = /^[a-zA-Z\s.'-]+$/;
+            if (name.value.trim() === "")
+                showError("reqName", "Please enter your name");
+            else if (!nameRegex.test(name.value.trim()))
+                showError("reqName", "Please enter a valid name (letters only)");
+
+            if (openings.value.trim() === "")
+                showError("reqOpenings", "Please enter required candidates");
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email.value.trim() === "")
+                showError("reqEmail", "Please enter email address");
+
+            else if (!emailRegex.test(email.value))
+                showError("reqEmail", "Please enter valid email address");
+
+            const phoneRegex = /^[0-9]{10}$/;
+
+            if (phone.value.trim() === "")
+                showError("reqPhone", "Please enter phone number");
+
+            else if (!phoneRegex.test(phone.value))
+                showError("reqPhone", "Please enter valid 10 digit phone number");
+
+            const genericRegex = /^[a-zA-Z0-9\s.\-&',()]+$/;
+            if (designation.value.trim() === "")
+                showError("reqDesignation", "Please enter designation");
+            else if (!genericRegex.test(designation.value.trim()))
+                showError("reqDesignation", "Please enter a valid designation");
+
+            if (company.value.trim() === "")
+                showError("reqCompany", "Please enter company name");
+            else if (!genericRegex.test(company.value.trim()))
+                showError("reqCompany", "Please enter a valid company name");
+
+            if (!experience.value)
+                showError("reqExperience", "Please select experience required");
+
+            if (!agree.checked) {
+                document.querySelector(".checkbox-error").innerText =
+                    "Please accept privacy policy";
+                valid = false;
+            }
+
+            if (!valid) {
+                if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            if (valid) {
+                const ok = await submitFormWithFile(
+                    {
+                        formType: 'requirement',
+                        data: {
+                            reqName: document.getElementById("reqName").value.trim(),
+                            reqCompany: document.getElementById("reqCompany").value.trim(),
+                            reqEmail: document.getElementById("reqEmail").value.trim(),
+                            reqPhone: document.getElementById("reqPhone").value.trim(),
+                            reqDesignation: document.getElementById("reqDesignation").value.trim(),
+                            reqOpenings: document.getElementById("reqOpenings").value,
+                            reqExperience: document.getElementById("reqExperience").value,
+                            reqMessage: document.getElementById("reqMessage").value.trim(),
+                        }
+                    },
+                    document.getElementById("reqFile")
+                );
+                if (ok) {
+                    document.getElementById("successMessage").style.display = "block";
+                    form.reset();
+                    setTimeout(function () { document.getElementById("successMessage").style.display = "none"; }, 3000);
+                }
+            }
+
+        });
+        });
+    </script>
+
+    <script>
+        var SYR_API = window.location.origin + '/api/public';
+        document.addEventListener('DOMContentLoaded', async function () {
+            try {
+                var r = await fetch(SYR_API + '/logos');
+                if (r.ok) {
+                    var logos = await r.json();
+                    var t = document.getElementById('shareLogosTrack');
+                    if (t && logos.length) {
+                        var imgs = logos.map(function (l) { return '<img src="' + l.imageUrl + '" alt="' + (l.altText || 'Client') + '">'; }).join('');
+                        t.innerHTML = imgs + imgs;
+                    }
+                }
+            } catch (e) { console.log(e); }
+
+        });
+    </script>
+
+    <div class="scroll-progress" id="scrollProgress">
+        <svg viewBox="0 0 40 40">
+            <circle class="progress-bg" cx="20" cy="20" r="17" />
+            <circle class="progress-fill" id="progressFill" cx="20" cy="20" r="17" />
+        </svg>
+    </div>
+    <a href="https://wa.me/919121912138?text=Hi%20Gensar%20Group%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+</body>
+
+</html>

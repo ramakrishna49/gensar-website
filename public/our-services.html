@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon-16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gensar services - IT Services, Non-IT Services & Staffing Solutions. Industry-focused consulting including software development, workforce solutions, corporate training, and more. Inventing Better Future.">
+    <meta name="keywords"
+        content="IT services, non-IT services, staffing solutions, software development, consulting, Gensar, technology solutions, industry consulting, shine with gensar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Our Services - Gensar | IT, Non-IT & Staffing Solutions">
+    <meta property="og:description"
+        content="Gensar - IT Services, Non-IT Services & Staffing Solutions. Industry-focused consulting for your business.">
+    <meta property="og:image" content="img/gensar_logo.png">
+    <meta property="og:type" content="website">
+    <title>Our Services - Gensar | IT, Non-IT & Staffing Solutions</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*=============================
+        SERVICES HERO
+==============================*/
+
+        .services-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(to right,
+                    rgba(255, 255, 255, .97) 0%,
+                    rgba(255, 255, 255, .92) 28%,
+                    rgba(255, 255, 255, .72) 45%,
+                    rgba(255, 255, 255, .20) 65%,
+                    rgba(255, 255, 255, 0) 100%),
+                url("img/serv.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .services-hero .container {
+            position: relative;
+            z-index: 2;
+            padding-top: 40px;
+        }
+
+        .hero-content {
+            max-width: 620px;
+        }
+
+        /* Badge */
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 22px;
+
+            background: rgba(180, 151, 214, .18);
+            color: #7C3AED;
+
+            border: 1px solid rgba(180, 151, 214, .35);
+            border-radius: 10px;
+
+            font-size: .95rem;
+            font-weight: 600;
+
+            margin-bottom: 24px;
+        }
+
+        .hero-badge i {
+            font-size: 1.1rem;
+        }
+
+        /* Heading */
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            line-height: 1.08;
+            font-weight: 800;
+            color: #222;
+            margin-bottom: 25px;
+            margin-top: 20px;
+
+        }
+
+        .hero-content h1 span {
+
+            background: linear-gradient(90deg, #8B5CF6, #B58AE3);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Paragraph */
+
+        .hero-content p {
+
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #555;
+
+
+        }
+
+        /* Features */
+
+        .hero-features {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 25px;
+        }
+
+        .feature {
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .feature i {
+
+            color: #8B5CF6;
+            font-size: 20px;
+        }
+
+        /* Buttons */
+
+        .hero-btns {
+
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #b58ae3, #7c9bf5);
+            color: #fff;
+            padding: 10px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .35s;
+            box-shadow: 0 5px 20px rgba(181, 138, 227, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #a87de0, #6b8ef0);
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(181, 138, 227, 0.45);
+        }
+
+        .btn-outline {
+            padding: 10px 26px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #eab596, #f5a07d);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .35s;
+            box-shadow: 0 5px 20px rgba(234, 181, 150, 0.25);
+        }
+
+        .btn-outline:hover {
+            background: linear-gradient(135deg, #e5aa88, #f0926a);
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(234, 181, 150, 0.45);
+        }
+
+        /* Background Glow */
+
+        .services-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background: rgba(181, 138, 227, .25);
+
+            filter: blur(140px);
+
+            left: -150px;
+            top: -120px;
+        }
+
+        /*==========================
+        Responsive
+===========================*/
+
+        @media(max-width:991px) {
+
+            .services-hero {
+
+                min-height: auto;
+
+                padding: 120px 0 80px;
+
+                background-position: 75%;
+            }
+
+            .hero-content {
+
+                max-width: 100%;
+            }
+
+            .hero-content h1 {
+
+                font-size: 3.2rem;
+            }
+
+            .hero-features {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .services-hero {
+
+                padding: 100px 0 70px;
+
+                background-position: 80%;
+            }
+
+            .hero-content h1 {
+
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+
+                font-size: 1rem;
+            }
+
+            .hero-btns {
+
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-outline {
+
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        @media(max-width:576px) {
+
+            .services-hero .container {
+                padding-top: 0;
+            }
+
+            .hero-content h1 {
+
+                font-size: 2rem;
+            }
+
+            .hero-badge {
+
+                font-size: .8rem;
+                padding: 8px 18px;
+            }
+
+            .feature {
+
+                font-size: .92rem;
+            }
+
+        }
+
+        @media(max-width:400px) {
+
+            .services-hero .container {
+                padding-top: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .services-hero {
+                background: linear-gradient(to bottom,
+                        rgba(255,255,255,.75) 0%,
+                        rgba(255,255,255,.65) 100%),
+                    url("img/serv.png");
+                background-size: cover;
+                background-position: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/gensar_logo.png" alt="Gensar Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list" id="menuIcon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="our-services.html">Services</a>
+                    </li>
+                    <!-- Consulting Dropdown Menu -->
+                   <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="gensar-consulting.html" role="button" data-bs-toggle="dropdown">Internship</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gensar-consulting.html#ai-ml" data-course-select="ai-ml">AI & ML</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-science" data-course-select="data-science">Data Science</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-analytics" data-course-select="data-analytics">Data Analytics</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#cyber-security" data-course-select="cyber-security">Cyber Security</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#full-stack" data-course-select="full-stack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="hire-us.html">Find Talent</a>
+                    </li>
+                </ul>
+                <a href="get-in-touch.html" class="contact-btn active">
+                    <i class="bi bi-send-fill me-2"></i>Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+
+
+
+                <h1>
+                    Empowering <span>Businesses</span><br>
+                    with Smart <span>Talent Solutions</span>
+                </h1>
+                <div class="divider"></div>
+
+                <p>
+                    We offer a comprehensive range of services, including IT solutions,
+                    Non-IT recruitment, internship programs, campus hiring, and career
+                    support. Our goal is to connect skilled professionals with the right
+                    opportunities while helping organizations build high-performing teams.
+                </p>
+
+                <div class="hero-features">
+
+                    <div class="feature">
+                        <i class="bi bi-laptop"></i>
+                        <span>IT Services</span>
+                    </div>
+
+                    <div class="feature">
+                        <i class="bi bi-building"></i>
+                        <span>Non-IT Services</span>
+                    </div>
+
+                    <div class="feature">
+                        <i class="bi bi-mortarboard"></i>
+                        <span>Internship Programs</span>
+                    </div>
+
+                    <div class="feature">
+                        <i class="bi bi-people"></i>
+                        <span>Staffing Services</span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="hero-btns">
+                    <a href="#services-grid" class="btn-primary">
+                        <i class="bi bi-compass-fill me-2"></i>Explore Services
+                    </a>
+
+                    <a href="get-in-touch.html" class="btn-outline">
+                        <i class="bi bi-chat-dots-fill me-2"></i>Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Core Services Grid Layout -->
+    <section id="services-grid" class="services-grid-section scroll-animate-section">
+        <div class="container anim-fade from-right">
+            <div class="row g-4">
+
+                <!-- Service Card 1: Custom Software Development -->
+                <div id="it-solutions" class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-purple-tint">
+                        <div class="service-card-icon icon-purple">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Software Development</h3>
+                        <p class="service-card-desc">
+                            Building scalable full-stack applications, robust APIs, and interactive dashboards
+                            engineered for modern deployment speeds.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Custom Web Apps</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Enterprise Cloud Solutions</li>
+                            <li><i class="bi bi-check-circle-fill"></i> API System Integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Automated Testing & QA -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-blue-tint">
+                        <div class="service-card-icon icon-blue">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">QA & Automated Testing</h3>
+                        <p class="service-card-desc">
+                            Mitigating project risks with high-accuracy automated testing frameworks, end-to-end
+                            security audits, and performance tuning.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Automation Scripting</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Regression & Load Testing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Defect Prevention & Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Data Processing & Analytics -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-peach-tint">
+                        <div class="service-card-icon icon-peach">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Data Processing</h3>
+                        <p class="service-card-desc">
+                            Transforming raw unstructured information into high-value data arrays, automated reports,
+                            and prediction-ready structures.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Big Data Infrastructure</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Automated Data Cleansing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Secure Cloud Storage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Business Support Services -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-purple-tint">
+                        <div class="service-card-icon icon-purple">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Business Operations Support</h3>
+                        <p class="service-card-desc">
+                            Streamlining backend operations with reliable, process-driven assistance to optimize
+                            workflows and reduce overhead costs.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Back-Office Optimization</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Digital Asset Management</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Operational Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Non-IT Project Solutions -->
+                <div id="non-it-solutions" class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-blue-tint">
+                        <div class="service-card-icon icon-blue">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Non-IT Workforce Solutions</h3>
+                        <p class="service-card-desc">
+                            Providing specialized workforce frameworks, logistics management, and strategic field
+                            support for cross-market ecosystems.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Resource Management</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Field Execution Support</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Specialized Training Delivery</li>
+                            <li><i class="bi bi-check-circle-fill"></i> PDF Accessibility & XML Services</li>
+                            <li><i class="bi bi-check-circle-fill"></i> E-Pub & Digital Publishing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Medical Coding & Billing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Tech Consulting & Strategy -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-peach-tint">
+                        <div class="service-card-icon icon-peach">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Technical Consulting</h3>
+                        <p class="service-card-desc">
+                            Guiding digital-first business transformation with precise architectural blueprints and
+                            technical advisory services.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Legacy Modernization</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cloud Strategy Roadmap</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Architecture Security Planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 7: Staffing Solutions -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-purple-tint">
+                        <div class="service-card-icon icon-purple">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Staffing Solutions</h3>
+                        <p class="service-card-desc">
+                            Connecting organizations with top talent through strategic IT and non-IT staffing,
+                            contract hiring, and permanent recruitment services.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> IT & Non-IT Talent Acquisition</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Contract & Permanent Hiring</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Workforce Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 8: Internship Programs -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-blue-tint">
+                        <div class="service-card-icon icon-blue">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Internship Programs</h3>
+                        <p class="service-card-desc">
+                            Industry-focused training and internship programs in AI & ML, Data Science,
+                            Cyber Security, and Full Stack Development with hands-on project experience.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> AI & ML Internship</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Data Science & Analytics</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cyber Security & Full Stack</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 9: Clinical Software -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-peach-tint">
+                        <div class="service-card-icon icon-peach">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Clinical Software</h3>
+                        <p class="service-card-desc">
+                            Comprehensive clinical software solutions including EHR/EMR systems, patient management, telehealth platforms, and healthcare compliance tools.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> EHR & Patient Management</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Telehealth Platforms</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Healthcare Data Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 10: Big Data -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-purple-tint">
+                        <div class="service-card-icon icon-purple">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Big Data</h3>
+                        <p class="service-card-desc">
+                            Enterprise big data solutions including real-time data processing, predictive analytics, data warehousing, and business intelligence platforms.
+                        </p>
+                        <ul class="service-feature-list mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Real-Time Data Pipelines</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Predictive Analytics</li>
+                            <li><i class="bi bi-check-circle-fill"></i> BI & Data Warehousing</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Asymmetric Process / Methodology Layer -->
+    <section class="process-flow-section scroll-animate-section bg-light">
+        <div class="container anim-fade from-left">
+
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <p class="theme-accent-text font-monospace uppercase mt-0 mb-0">How We Operate</p>
+                    <div class="section-heading-wrapper">
+                        <h2 class="section-main-title mt-2">Our Execution <span
+                                class="text-gradient-purple">Architecture</span></h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0 process-steps-timeline">
+
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6 process-step-item">
+                    <div class="step-card-inner">
+                        <div class="step-number-glow text-purple">01</div>
+                        <h4 class="step-title">Discover & Blueprint</h4>
+                        <p class="step-desc">We deep-dive into your operational parameters to create a clear project
+                            architectural layout.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6 process-step-item">
+                    <div class="step-card-inner">
+                        <div class="step-number-glow text-blue">02</div>
+                        <h4 class="step-title">Agile Engineering</h4>
+                        <p class="step-desc">Our tech teams write clean, optimized scripts and deploy modules in rapid,
+                            organized sprints.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6 process-step-item">
+                    <div class="step-card-inner">
+                        <div class="step-number-glow text-peach">03</div>
+                        <h4 class="step-title">Rigorous QA Testing</h4>
+                        <p class="step-desc">Automated protocols check every logic node to ensure high-quality execution with minimal
+                            defects.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6 process-step-item">
+                    <div class="step-card-inner">
+                        <div class="step-number-glow text-purple">04</div>
+                        <h4 class="step-title">Seamless Delivery</h4>
+                        <p class="step-desc">We launch your project into production while providing ongoing technical
+                            support operations.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="editorial-section">
+        <div class="container">
+
+            <div class="text-center anim-fade from-right">
+                <h2 class="mb-1">Our <span class="text-gradient-purple">Philosophy</span></h2>
+                <div class="divider" style="margin-left:auto;margin-right:auto;"></div>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-purple-tint h-100 text-center">
+                        <div class="service-card-icon icon-purple mx-auto">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Precision</h3>
+                        <p class="service-card-desc">Every line of code and every pixel is crafted with intent and technical excellence.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-blue-tint h-100 text-center">
+                        <div class="service-card-icon icon-blue mx-auto">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Empathy</h3>
+                        <p class="service-card-desc">We listen to your story to ensure the final product reflects your unique identity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-interactive-card border-peach-tint h-100 text-center">
+                        <div class="service-card-icon icon-peach mx-auto">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 class="service-card-title mt-4">Longevity</h3>
+                        <p class="service-card-desc">We build solutions that evolve and grow alongside your business over time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section py-5">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+            <div class="section-heading-wrapper anim-fade from-left">
+                <h2 class="mb-1">Frequently Asked <span class="text-gradient-purple">Questions</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="accordion accordion-flush" id="faqAccordion">
+
+                <div class="accordion-item anim-fade from-left delay-100">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            What is the estimated delivery time for my project?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The timeline depends on the complexity and scope of your project. We provide a clear,
+                            estimated schedule before starting any work.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item anim-fade from-left delay-200">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Do I need to make an advance payment?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, a certain percentage of the project cost is required as an advance payment to initiate
+                            the work. All terms are outlined in our agreement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item anim-fade from-left delay-300">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            Do you provide post-project support?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutely! We provide ongoing support to assist with any technical issues that may arise
+                            after the project is delivered.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="accordion-item anim-fade from-left delay-400">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4">
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept payments via bank transfer, major credit cards, and digital wallets. Details will
+                            be provided upon invoice issuance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="accordion-item anim-fade from-left delay-500">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5">
+                            Can you work with clients outside of your local area?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we work with clients globally. We use modern communication tools to ensure a seamless
+                            workflow regardless of your location.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Minimalist Action Gateway for Services -->
+    <section class="services-cta-gateway scroll-animate-section">
+        <div class="container anim-fade from-right">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div
+                        class="cta-asymmetric-box border-purple-tint text-center text-lg-start d-lg-flex align-items-center justify-content-between p-5">
+                        <div class="cta-text-block mb-4 mb-lg-0">
+                            <h2 class="cta-heading-title">Have a Complex Project in Mind?</h2>
+                            <p class="cta-sub-text mb-0">Let’s collaborate to deploy optimized frameworks tailored for
+                                your business scaling goals.</p>
+                        </div>
+                        <div class="cta-action-block">
+                            <a href="get-in-touch.html" class="pane-btn btn-solid-dark py-3 px-5">
+                                Get Custom Estimate <i class="bi bi-arrow-right-short ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer-premium">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+
+                        <img src="img/Gensar Main Logo 2400x1800.jpg.jpeg" alt="Gensar IT Solution" class="footer-logo">
+
+                        <p class="footer-about">
+                            Gensar IT Solution empowers businesses with innovative IT solutions,
+                            staffing services, corporate training, and digital transformation
+                            strategies that drive measurable growth and long-term success. We also
+                            provide comprehensive Non-IT business services including BPO, KPO,
+                            healthcare operations, customer experience solutions, and back-office
+                            processing to streamline your business operations.
+                        </p>
+
+                        <div class="footer-social" style="text-align:center;">
+                            <a href="https://www.linkedin.com/company/gensar-group/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/gensar_group/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 footer-quick-links">
+                    <h5 class="footer-title">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="gensar-consulting.html">Courses</a></li>
+                        <li><a href="gensar-consulting.html">Internship</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="hire-us.html">Find Talent</a></li>
+                        <li><a href="get-in-touch.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 footer-services">
+                    <h5 class="footer-title">Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="our-services.html">IT Solutions</a></li>
+                        <li><a href="our-services.html">Non-IT Services</a></li>
+                        <li><a href="hire-us.html">Staffing Solutions</a></li>
+                        <li><a href="gensar-consulting.html">Corporate Training</a></li>
+                        <li><a href="gensar-consulting.html">AI & Data Services</a></li>
+                        <li><a href="gensar-consulting.html">Cyber Security</a></li>
+                        <li><a href="gensar-consulting.html">Cloud Services</a></li>
+                        <li><a href="gensar-consulting.html">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations -->
+                <div class="col-lg-3 col-md-6 footer-services">
+                    <h5 class="footer-title">Our Locations</h5>
+
+                    <div class="footer-location">
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Hyderabad</strong>
+                            Manjeera Trinity, 402, 4th floor, KPHB, Hyderabad – 500072
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Bangalore</strong>
+                            #824, 1st Block HRBR Layout,
+                            5th A Cross, Kalyan Nagar, Bangalore,
+                            Karnataka -560043
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>USA</strong>
+                            1760 Reston Parkway, Reston, VA 20190, USA
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Dubai</strong>
+                            Prime Business centre- AI Barsha South Fourth- Jumeirah Village Circle- Dubai- United Arab
+                            Emirates
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h4>Stay Updated With Gensar</h4>
+                        <p>Get updates on services, hiring opportunities, and training programs.</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form class="newsletter-form">
+                            <input type="text" class="newsletter-name" placeholder="Your name" pattern="[a-zA-Z\s.'-]+" title="Letters only">
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+
+                    <p>
+                        © 2026 Gensar IT Solution. All Rights Reserved.
+                    </p>
+
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <div class="scroll-progress" id="scrollProgress">
+        <svg viewBox="0 0 40 40">
+            <circle class="progress-bg" cx="20" cy="20" r="17" />
+            <circle class="progress-fill" id="progressFill" cx="20" cy="20" r="17" />
+        </svg>
+    </div>
+    <a href="https://wa.me/919121912138?text=Hi%20Gensar%20Group%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+</body>
+
+</html>

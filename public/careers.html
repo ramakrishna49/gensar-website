@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon-16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join Gensar - IT Services, Non-IT Services & Staffing Solutions. Explore career openings across AI & ML, Cyber Security, Engineering, and more. Inventing Better Future.">
+    <meta name="keywords" content="careers, jobs, Gensar, IT services, non-IT services, staffing, AI engineer, cybersecurity, full stack developer, Hyderabad, remote jobs, shine with gensar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Careers - Gensar | IT, Non-IT & Staffing Opportunities">
+    <meta property="og:description" content="Join Gensar - IT Services, Non-IT Services & Staffing Solutions. Explore career openings across AI & ML, Cyber Security, Engineering, and more.">
+    <meta property="og:image" content="img/gensar_logo.png">
+    <meta property="og:type" content="website">
+    <title>Careers - Gensar | IT, Non-IT & Staffing Opportunities</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*==========================
+      Career Hero
+===========================*/
+
+        .cr-hero {
+            position: relative;
+            overflow: hidden;
+
+            min-height: auto;
+            height: auto;
+
+            padding: 130px 0 70px;
+        }
+
+        .cr-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cr-hero .row {
+            align-items: center;
+            margin: 0;
+        }
+
+        .cr-hero .hero-title {
+            margin-bottom: 18px;
+        }
+
+        .cr-hero .divider {
+            margin: 18px 0 24px;
+        }
+
+        .cr-hero .hero-desc {
+            max-width: 620px;
+            margin-bottom: 35px;
+        }
+
+        .cr-hero .hero-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+
+        .cr-hero .hero-buttons .btn-premium {
+            margin-bottom: 0;
+        }
+
+        /* Remove extra bottom spacing */
+
+        .cr-hero *:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Tablet */
+
+        @media (max-width:991px) {
+
+            .cr-hero {
+                padding: 140px 0 60px;
+                text-align: center;
+            }
+
+            .cr-hero .hero-desc {
+                margin: 0 auto 30px;
+            }
+
+            .cr-hero .hero-buttons {
+                justify-content: center;
+            }
+
+        }
+
+        /* Mobile */
+
+        @media (max-width:767px) {
+
+            .cr-hero {
+                padding: 120px 0 50px;
+            }
+
+            .cr-hero .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cr-hero .hero-buttons .btn-premium {
+                width: 100%;
+                max-width: 300px;
+            }
+
+        }
+
+        .job-search-bar:focus-within {
+            border-color: var(--color-primary) !important;
+            box-shadow: 0 0 0 3px rgba(181, 138, 227, 0.15);
+        }
+
+        #jobSearchInput:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        @media (max-width: 576px) {
+            .job-search-bar span {
+                padding: 0 12px !important;
+            }
+            #jobSearchInput {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/gensar_logo.png" alt="Gensar Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list" id="menuIcon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our-services.html">Services</a>
+                    </li>
+                    <!-- Consulting Dropdown Menu -->
+                   <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link dropdown-toggle" href="gensar-consulting.html" role="button" data-bs-toggle="dropdown">Internship</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gensar-consulting.html#ai-ml" data-course-select="ai-ml">AI & ML</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-science" data-course-select="data-science">Data Science</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#data-analytics" data-course-select="data-analytics">Data Analytics</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#cyber-security" data-course-select="cyber-security">Cyber Security</a></li>
+                            <li><a class="dropdown-item" href="gensar-consulting.html#full-stack" data-course-select="full-stack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hire-us.html">Find Talent</a>
+                    </li>
+                </ul>
+                <a href="get-in-touch.html" class="contact-btn">
+                    <i class="bi bi-send-fill me-2"></i>Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO HEADER -->
+    <header class="hero-section cr-hero">
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="hero-tag mb-3">We Are Hiring</span>
+                    <h1 class="hero-title"><span class="text-gradient-purple">Shape</span> The Next Iteration Of
+                        Enterprise Tech</h1>
+                    <div class="divider"></div>
+                    <p class="hero-desc">
+                        At Gensar, we build production software and run critical cybersecurity audits. Join a
+                        collaborative culture of engineers, designers, and researchers deploying actual technology
+                        solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#open-roles" class="btn-premium btn-premium-primary">
+                            Browse Open Roles <i class="bi bi-briefcase ms-1"></i>
+                        </a>
+                        <a href="#careers-form-section" class="btn-premium btn-premium-secondary">
+                            General Application <i class="bi bi-file-earmark-person ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="cr-hero-decor"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- SECTION 3: JOB BOARD (FILTERABLE) -->
+    <section id="open-roles" class="section-padding">
+        <div class="gradient-bg-blob"></div>
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-right">
+                <span class="section-subtitle">Career Opportunities</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title"><span class="text-gradient-purple">Open</span> Positions</h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    <span id="openPositionsCount">0</span> open positions across IT services, Non-IT services, and staffing roles.
+                    Type a keyword to find the perfect opportunity for you.
+                </p>
+            </div>
+
+            <!-- Job Search -->
+            <div class="row mb-5 justify-content-center anim-fade from-right">
+                <div class="col-12">
+                    <div class="job-search-wrapper" style="max-width: 600px; margin: 0 auto;">
+                        <div class="job-search-bar" style="display: flex; align-items: center; background: var(--bg-dark-primary); border: 2px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: border-color 0.3s;">
+                            <span style="display: flex; align-items: center; justify-content: center; padding: 0 16px; flex-shrink: 0; height: 52px;">
+                                <i class="bi bi-search" style="color: var(--color-primary); font-size: 1.3rem;"></i>
+                            </span>
+                            <input type="text" id="jobSearchInput" class="form-input-custom" 
+                                placeholder="Search by title, skills, category..." 
+                                style="border: none; border-radius: 0; padding: 0 18px 0 0; height: 52px; font-size: 1rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Listings Cards -->
+            <div class="row gy-4" id="jobListingsContainer"><div class="col-12 text-center py-5"><p class="text-secondary"><span class="spinner-border spinner-border-sm me-2" role="status"></span>Loading open positions...</p></div></div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BENEFITS & PERKS -->
+    <section class="section-padding bg-dark-secondary"
+        style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-left">
+                <span class="section-subtitle">Gensar Ecosystem</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">Ecosystem <span class="text-gradient-purple">Perks</span></h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    We support our team with wellness and education stipends so you can focus on building outstanding
+                    technology.
+                </p>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-3 col-sm-6 text-center anim-fade from-left">
+                    <div class="stat-card"
+                        style="background: var(--bg-dark-primary); border-radius: 10px; border: 1px solid var(--border-color); padding: 30px;">
+                        <i class="bi bi-heart-pulse-fill text-gradient-purple"
+                            style="font-size: 2.2rem; display: block; margin-bottom: 15px;"></i>
+                        <h5 class="mb-2">Premium Cover</h5>
+                        <p class="text-secondary mb-0" style="font-size: 0.85rem;">Comprehensive health and dental
+                            insurance for you and dependents.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 text-center anim-fade from-left delay-100">
+                    <div class="stat-card"
+                        style="background: var(--bg-dark-primary); border-radius: 10px; border: 1px solid var(--border-color); padding: 30px;">
+                        <i class="bi bi-laptop-fill text-gradient-cyan"
+                            style="font-size: 2.2rem; display: block; margin-bottom: 15px;"></i>
+                        <h5 class="mb-2">Setup Stipend</h5>
+                        <p class="text-secondary mb-0" style="font-size: 0.85rem;">Annual budgets to acquire development
+                            displays, keyboards, or chairs.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 text-center anim-fade from-left delay-200">
+                    <div class="stat-card"
+                        style="background: var(--bg-dark-primary); border-radius: 10px; border: 1px solid var(--border-color); padding: 30px;">
+                        <i class="bi bi-book-half text-gradient-purple"
+                            style="font-size: 2.2rem; display: block; margin-bottom: 15px;"></i>
+                        <h5 class="mb-2">Education Budget</h5>
+                        <p class="text-secondary mb-0" style="font-size: 0.85rem;">Unlimited certification
+                            reimbursements (AWS, OSCP, Red Hat).</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 text-center anim-fade from-left delay-300">
+                    <div class="stat-card"
+                        style="background: var(--bg-dark-primary); border-radius: 10px; border: 1px solid var(--border-color); padding: 30px;">
+                        <i class="bi bi-airplane-fill text-gradient-cyan"
+                            style="font-size: 2.2rem; display: block; margin-bottom: 15px;"></i>
+                        <h5 class="mb-2">Annual Retreat</h5>
+                        <p class="text-secondary mb-0" style="font-size: 0.85rem;">We gather our global cohort in a
+                            tropical location for code hackathons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: HIRING TIMELINE -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-right">
+                <span class="section-subtitle">Recruitment Flow</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">The Selection <span class="text-gradient-purple">Process</span></h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    We value your time. We keep our interview loops targeted, technical, and limited to 4 key stages.
+                </p>
+            </div>
+
+            <div class="journey-timeline mt-5">
+                <!-- Step 1 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">1</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Stage 01: Review</span>
+                        <h4>Profile Verification</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Our core development leads review your code repos, GitHub portfolios, and past architectural
+                            scope.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">2</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Stage 02: Practical</span>
+                        <h4>Sandbox Lab Challenge</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            You are provisioned a dedicated, sandboxed VM to complete a 3-hour take-home practical task
+                            (no algorithmic puzzles).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">3</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Stage 03: Session</span>
+                        <h4>Architecture Review</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            A 60-minute technical review with our architects to walk through your code decisions,
+                            scaling choices, and security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">4</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Stage 04: Offer</span>
+                        <h4>Cultural Scoping & Scope</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Align on salary structures, coordinate remote/hybrid onboarding timelines, and issue clean
+                            contracts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: APPLICATION FORM -->
+    <section id="careers-form-section" class="section-padding bg-dark-secondary">
+        <div class="container">
+            <div class="cta-container anim-fade from-left">
+                <div class="cta-glow-decor"></div>
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-5 text-center text-lg-start cta-form-wrapper">
+
+                        <span class="hero-tag mb-3" style="color: var(--color-primary);
+        background: rgba(181, 138, 227, 0.08);
+        border-color: rgba(181, 138, 227, 0.2);">
+
+                            Careers at Gensar
+
+                        </span>
+
+                        <h2 class="text-gradient-purple display-6 fw-bold mb-3">
+                            Build Your Career With Us
+                        </h2>
+
+                        <p class="text-secondary">
+                            Take the next step in your professional journey by joining Gensar.
+                            We offer IT & Non-IT Staffing Services across diverse industries,
+                            providing career opportunities in technology, business operations,
+                            and workforce solutions. Submit your application today and become
+                            part of our success story.
+                        </p>
+
+                        <div class="mt-4">
+
+                            <p
+                                class="d-flex align-items-center gap-3 text-secondary" style="text-align: left; justify-content: flex-start;">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i>
+                                IT & Non-IT Career Opportunities
+                            </p>
+
+                            <p
+                                class="d-flex align-items-center gap-3 text-secondary" style="text-align: left; justify-content: flex-start;">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i>
+                                Internship & Fresher Hiring
+                            </p>
+
+                            <p
+                                class="d-flex align-items-center gap-3 text-secondary" style="text-align: left; justify-content: flex-start;">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i>
+                                Learning & Career Growth
+                            </p>
+
+                            <p
+                                class="d-flex align-items-center gap-3 text-secondary" style="text-align: left; justify-content: flex-start;">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i>
+                                Competitive Salary & Employee Benefits
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 cta-form-wrapper">
+
+                        <form id="careersForm" novalidate style="position: relative;">
+
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="careersName">Full Name</label>
+                                        <input type="text" id="careersName" class="form-input-custom"
+                                            placeholder="Enter your full name" pattern="[a-zA-Z\s.'-]+"
+                                            title="Only alphabetic characters allowed" required>
+                                        <span class="error-message" id="careersNameError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="careersDob">Date of Birth</label>
+                                        <input type="date" id="careersDob" class="form-input-custom" required>
+                                        <span class="error-message" id="careersDobError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="careersEmail">Email Address</label>
+                                        <input type="email" id="careersEmail" class="form-input-custom"
+                                            placeholder="Enter your email" required>
+                                        <span class="error-message" id="careersEmailError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="careersPhone">Contact Number</label>
+                                        <input type="tel" id="careersPhone" class="form-input-custom"
+                                            placeholder="Enter your mobile number" inputmode="numeric" pattern="[0-9+\s]{10,15}" title="Enter a valid phone number (10-15 digits)" required>
+                                        <span class="error-message" id="careersPhoneError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="experience">Experience</label>
+                                        <select id="experience" class="form-input-custom form-select-custom" required>
+
+                                            <option value="" selected disabled>Select Experience</option>
+
+                                            <option>Fresher</option>
+                                            <option>0 - 1 Year</option>
+                                            <option>1 - 2 Years</option>
+                                            <option>2 - 3 Years</option>
+                                            <option>3 - 5 Years</option>
+                                            <option>5+ Years</option>
+
+                                        </select>
+                                        <span class="error-message" id="experienceError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="passoutYear">Year of Pass Out</label>
+                                        <select id="passoutYear" class="form-input-custom form-select-custom" required>
+
+                                            <option value="" selected disabled>Select Year</option>
+
+                                            <option>2026</option>
+                                            <option>2025</option>
+                                            <option>2024</option>
+                                            <option>2023</option>
+                                            <option>2022</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>Before 2018</option>
+
+                                        </select>
+                                        <span class="error-message" id="passoutYearError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 4 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="applyPosition">Position Applying For</label>
+
+                                        <select id="applyPosition" class="form-input-custom form-select-custom"
+                                            required>
+
+                                            <option value="" selected disabled>Select Position</option>
+
+                                            <option>Software Developer</option>
+                                            <option>Frontend Developer</option>
+                                            <option>Backend Developer</option>
+                                            <option>Full Stack Developer</option>
+                                            <option>UI/UX Designer</option>
+                                            <option>QA Engineer</option>
+                                            <option>Data Analyst</option>
+                                            <option>Data Scientist</option>
+                                            <option>AI / ML Engineer</option>
+                                            <option>Cyber Security Analyst</option>
+                                            <option>HR Executive</option>
+                                            <option>Business Development Executive</option>
+                                            <option>Digital Marketing Executive</option>
+
+                                        </select>
+                                        <span class="error-message" id="applyPositionError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group-custom">
+                                        <label for="careersCover">Cover Letter / Message</label>
+                                        <textarea id="careersCover" class="form-input-custom"
+                                            placeholder="Tell us why you'd be a great fit..." rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="careersResume">Upload Resume</label>
+
+                                        <input type="file" id="careersResume" class="form-input-custom"
+                                            accept=".pdf,.doc,.docx" required>
+
+                                        <small id="resumeWarning" style="display:none;color:#dc3545;font-size:0.85rem;">
+                                            Upload PDF, DOC or DOCX (Maximum 5MB).
+                                        </small>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Consent -->
+
+                            <div class="form-group-custom my-4">
+                                <label class="checkbox-custom">
+                                    <input type="checkbox" id="careersAgreeCheck" required>
+
+                                    <span class="checkbox-box"></span>
+
+                                    <span>
+                                        I certify that the information provided is true and
+                                        accurate to the best of my knowledge.
+                                    </span>
+                                    </label>
+                                    <span class="error-message" id="careersAgreeError"></span>
+                                </div>
+
+                                <!-- Submit -->
+
+                                <button type="submit" class="btn-premium btn-premium-primary w-100 justify-content-center">
+
+                                Apply Now
+
+                                <i class="bi bi-send-fill ms-2"></i>
+
+                                </button>
+
+                        <!-- Success Overlay UI -->
+                        <div class="form-success-overlay" id="careersSuccessOverlay">
+                            <div class="success-icon">
+                                <i class="bi bi-file-earmark-check-fill"></i>
+                            </div>
+                            <h3 class="text-gradient-cyan mb-2">Application Received!</h3>
+                            <p class="text-secondary max-w-400 mb-4">
+                                Thank you! Your application has been submitted successfully.
+                            </p>
+                            <button id="careersOverlayCloseBtn" class="btn-premium btn-premium-secondary">
+                                Back to Page
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+
+                        <img src="img/Gensar Main Logo 2400x1800.jpg.jpeg" alt="Gensar IT Solution" class="footer-logo">
+
+                        <p class="footer-about">
+                            Gensar IT Solution empowers businesses with innovative IT solutions,
+                            Non-IT services, staffing solutions, corporate training, and digital
+                            transformation strategies that drive measurable growth and long-term success.
+                            We also provide comprehensive Non-IT business services including BPO, KPO,
+                            healthcare operations, customer experience solutions, and back-office
+                            processing to streamline your business operations.
+                        </p>
+
+                        <div class="footer-social" style="text-align:center;">
+                            <a href="https://www.linkedin.com/company/gensar-group/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/gensar_group/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 footer-quick-links">
+                    <h5 class="footer-title">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="gensar-consulting.html">Courses</a></li>
+                        <li><a href="gensar-consulting.html">Internship</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="hire-us.html">Find Talent</a></li>
+                        <li><a href="get-in-touch.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 footer-services">
+                    <h5 class="footer-title">Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="our-services.html">IT Solutions</a></li>
+                        <li><a href="our-services.html">Non-IT Services</a></li>
+                        <li><a href="hire-us.html">Staffing Solutions</a></li>
+                        <li><a href="gensar-consulting.html">Corporate Training</a></li>
+                        <li><a href="gensar-consulting.html">AI & Data Services</a></li>
+                        <li><a href="gensar-consulting.html">Cyber Security</a></li>
+                        <li><a href="gensar-consulting.html">Cloud Services</a></li>
+                        <li><a href="gensar-consulting.html">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations -->
+                <div class="col-lg-3 col-md-6 footer-services">
+                    <h5 class="footer-title">Our Locations</h5>
+
+                    <div class="footer-location">
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Hyderabad</strong>
+                            Manjeera Trinity, 402, 4th floor, KPHB, Hyderabad – 500072
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Bangalore</strong>
+                            #824, 1st Block HRBR Layout,
+                            5th A Cross, Kalyan Nagar, Bangalore,
+                            Karnataka -560043
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>USA</strong>
+                            1760 Reston Parkway, Reston, VA 20190, USA
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Dubai</strong>
+                            Prime Business centre- AI Barsha South Fourth- Jumeirah Village Circle- Dubai- United Arab
+                            Emirates
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h4>Stay Updated With Gensar</h4>
+                        <p>Get updates on services, hiring opportunities, and training programs.</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form class="newsletter-form">
+                            <input type="text" class="newsletter-name" placeholder="Your name" pattern="[a-zA-Z\s.'-]+" title="Letters only">
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+
+                    <p>
+                        © 2026 Gensar IT Solution. All Rights Reserved.
+                    </p>
+
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+    <noscript><div class="container text-center py-5"><p class="text-secondary">Enable JavaScript to view live job openings.</p></div></noscript>
+    <script>
+        // Job Search + Fetch from API
+        document.addEventListener("DOMContentLoaded", async function () {
+            var container = document.getElementById("jobListingsContainer");
+            var searchInput = document.getElementById("jobSearchInput");
+            if (!container) return;
+
+            try {
+                var API_BASE = window.location.origin + '/api/public';
+                var res = await fetch(API_BASE + '/jobs', { cache: 'no-cache' });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                var jobs = await res.json();
+                renderJobs(jobs);
+            } catch (e) {
+                console.log('Jobs fetch failed:', e);
+                container.innerHTML = '<div class="col-12 text-center py-5"><p class="text-secondary">Unable to load jobs at this time. Please check back later.</p><p class="text-muted small mt-2">If the problem persists, clear your cache or contact support.</p></div>';
+            }
+
+            function renderJobs(jobs) {
+                var countEl = document.getElementById("openPositionsCount");
+                if (countEl) countEl.textContent = jobs.length;
+
+                if (!jobs.length) {
+                    container.innerHTML = '<div class="col-12 text-center py-5"><p class="text-secondary">No open positions currently. Check back soon!</p></div>';
+                    return;
+                }
+                container.innerHTML = jobs.map(function (job, idx) {
+                    var tools = Array.isArray(job.tools) ? job.tools.map(function (t) { return '<span class="tool-badge">' + t + '</span>'; }).join('') : '';
+                    var cat = (job.category || 'all').toLowerCase().replace(/\s+/g, '-');
+                    var delay = idx % 2 === 1 ? ' delay-100' : '';
+                    var gradientClass = idx % 2 === 0 ? 'text-gradient-purple' : 'text-gradient-cyan';
+                    var badgeClass = idx % 2 === 0 ? 'badge-purple' : 'badge-blue';
+                    var locationIcon = '<i class="bi bi-geo-alt-fill me-1"></i>';
+                    return '<div class="col-lg-6 job-item-card anim-fade from-right' + delay + '" data-job-category="' + cat + '">' +
+                        '<div class="course-detail-pane h-100 d-flex flex-column justify-content-between" style="padding: 30px;">' +
+                        '<div>' +
+                        '<div class="d-flex justify-content-between align-items-start mb-3">' +
+                        '<h4 class="mb-0 ' + gradientClass + '">' + (job.title || '') + '</h4>' +
+                        '<span class="badge ' + badgeClass + '" style="font-size: 0.75rem;">' + (job.category || 'General') + '</span>' +
+                        '</div>' +
+                        '<p class="text-secondary" style="font-size: 0.9rem;">' + (job.description || '') + '</p>' +
+                        (tools ? '<div class="tools-list my-3">' + tools + '</div>' : '') +
+                        '</div>' +
+                        '<div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top" style="border-color: var(--border-color) !important;">' +
+                        '<span class="text-secondary font-monospace" style="font-size: 0.85rem;">' + locationIcon + (job.location || 'Remote') + '</span>' +
+                        '<a href="#careers-form-section" class="btn-premium btn-premium-secondary btn-apply-trigger" data-job-title="' + (job.title || '') + '" style="padding: 8px 18px; font-size: 0.85rem;">Apply Now</a>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                }).join('');
+
+                // Add animated class immediately since these cards are dynamically
+                // inserted (the IntersectionObserver already ran at DOMContentLoaded)
+                container.querySelectorAll('.job-item-card').forEach(function(c) {
+                    c.classList.add('animated');
+                });
+
+                populatePositionSelect(jobs);
+                reattachSearch();
+                reattachApplyButtons();
+            }
+
+            function reattachSearch() {
+                if (!searchInput) return;
+                searchInput.addEventListener("input", function () {
+                    var query = this.value.toLowerCase().trim();
+                    document.querySelectorAll("#jobListingsContainer .job-item-card").forEach(function (card) {
+                        if (query === "") { card.style.display = ""; return; }
+                        var title = (card.querySelector("h4")?.innerText || "").toLowerCase();
+                        var desc = (card.querySelector("p.text-secondary")?.innerText || "").toLowerCase();
+                        var tools = Array.from(card.querySelectorAll(".tool-badge")).map(function (t) { return t.innerText.toLowerCase(); }).join(" ");
+                        var category = (card.getAttribute("data-job-category") || "").toLowerCase();
+                        var match = title.includes(query) || desc.includes(query) || tools.includes(query) || category.includes(query);
+                        card.style.display = match ? "" : "none";
+                    });
+                });
+            }
+
+            function populatePositionSelect(jobs) {
+                var jobSelect = document.getElementById("applyPosition");
+                if (!jobSelect) return;
+                var existingTexts = {};
+                for (var i = 0; i < jobSelect.options.length; i++) {
+                    existingTexts[jobSelect.options[i].text.trim().toLowerCase()] = true;
+                }
+                jobs.forEach(function (job) {
+                    if (job.title && !existingTexts[job.title.trim().toLowerCase()]) {
+                        var opt = document.createElement("option");
+                        opt.value = job.title;
+                        opt.textContent = job.title;
+                        jobSelect.appendChild(opt);
+                        existingTexts[job.title.trim().toLowerCase()] = true;
+                    }
+                });
+            }
+
+            function reattachApplyButtons() {
+                var jobSelect = document.getElementById("applyPosition");
+                document.querySelectorAll(".btn-apply-trigger").forEach(function (btn) {
+                    btn.addEventListener("click", function () {
+                        var title = this.getAttribute("data-job-title");
+                        if (!title || !jobSelect) return;
+
+                        // Try direct value match first
+                        jobSelect.value = title;
+
+                        // If no match, try finding by option text
+                        if (jobSelect.value !== title) {
+                            for (var i = 0; i < jobSelect.options.length; i++) {
+                                if (jobSelect.options[i].text.trim() === title.trim()) {
+                                    jobSelect.selectedIndex = i;
+                                    break;
+                                }
+                            }
+                        }
+
+                        // If still no match, add a new option for this title
+                        if (jobSelect.value !== title) {
+                            var opt = document.createElement("option");
+                            opt.value = title;
+                            opt.textContent = title;
+                            jobSelect.appendChild(opt);
+                            jobSelect.value = title;
+                        }
+
+                        jobSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    });
+                });
+            }
+        });
+
+        // Course Database for Dynamic Tab Swapping
+        const coursesData = {
+            "ai-ml": {
+                title: "Artificial Intelligence & Machine Learning",
+                description: "Master the algorithms, mathematics, and systems required to build intelligent applications. From deep learning neural networks to natural language processing and computer vision.",
+                duration: "24 Weeks",
+                level: "Advanced",
+                format: "Live Online & Labs",
+                capstone: "Autonomous Agent & Predictive Analytics Suite",
+                tools: ["Python", "PyTorch", "TensorFlow", "scikit-learn", "HuggingFace", "AWS SageMaker", "Docker"],
+                syllabus: [
+                    {
+                        title: "Module 1: Foundations of Mathematics & Python for AI",
+                        content: ["Linear algebra, calculus, and probability for machine learning", "Advanced Python programming, NumPy, Pandas, and vectorization techniques", "Exploratory Data Analysis (EDA) and data preprocessing pipelines"]
+                    },
+                    {
+                        title: "Module 2: Classical Machine Learning & Supervised Models",
+                        content: ["Regression, classification, decision trees, and ensemble methods (XGBoost, Random Forest)", "Model evaluation metrics: Precision-Recall, ROC-AUC, F1-Score", "Hyperparameter tuning and cross-validation techniques"]
+                    },
+                    {
+                        title: "Module 3: Deep Learning & Neural Networks",
+                        content: ["Multi-Layer Perceptrons (MLPs), backpropagation, and optimization algorithms", "Convolutional Neural Networks (CNNs) for Computer Vision", "Recurrent Neural Networks (RNNs) and LSTMs for sequence data"]
+                    },
+                    {
+                        title: "Module 4: Modern NLP & Large Language Models (LLMs)",
+                        content: ["Attention Mechanisms and Transformer Architectures", "Fine-tuning LLMs (LoRA, QLoRA) and prompt engineering frameworks", "Retrieval-Augmented Generation (RAG) pipelines and Vector Databases (Pinecone/Milvus)"]
+                    }
+                ]
+            },
+            "data-science": {
+                title: "Data Science & Predictive Modeling",
+                description: "Bridge the gap between raw data and business decision-making. Learn statistical analysis, predictive modeling, data wrangling, and how to communicate data stories effectively.",
+                duration: "18 Weeks",
+                level: "Intermediate to Advanced",
+                format: "Hybrid / Cohort-based",
+                capstone: "End-to-End Enterprise Predictive analytics Dashboard",
+                tools: ["Python", "R Language", "SQL", "Pandas", "Statsmodels", "PowerBI", "Git", "Snowflake"],
+                syllabus: [
+                    {
+                        title: "Module 1: Statistical Foundations & Data Wrangling",
+                        content: ["Descriptive and inferential statistics, hypothesis testing", "Data cleaning, restructuring, and handling missing/anomalous data", "SQL for advanced data querying, window functions, and joins"]
+                    },
+                    {
+                        title: "Module 2: Feature Engineering & Predictive Modeling",
+                        content: ["Dimensionality reduction (PCA, t-SNE)", "Feature selection techniques and engineering domain-specific variables", "Regression modeling, forecasting techniques, and clustering algorithms (K-Means, DBSCAN)"]
+                    },
+                    {
+                        title: "Module 3: Business Analytics & Decision Intelligence",
+                        content: ["A/B testing methodology, sample size determination, and significance", "Translating complex statistical metrics into actionable business recommendations", "Designing data products and predictive API endpoints"]
+                    },
+                    {
+                        title: "Module 4: Big Data Frameworks & Deployment",
+                        content: ["Introduction to Spark, PySpark, and distributed computing", "Deploying data science models using Streamlit and Flask/FastAPI", "Version control for data science (DVC) and model monitoring"]
+                    }
+                ]
+            },
+            "data-analytics": {
+                title: "Data Analytics & Business Intelligence",
+                description: "Transform raw datasets into actionable intelligence. Become proficient in data visualization, SQL scripting, dashboard design, and translating complex trends into business growth.",
+                duration: "12 Weeks",
+                level: "Beginner to Intermediate",
+                format: "Flexible Online",
+                capstone: "Interactive Real-time Visual Intelligence Portal",
+                tools: ["SQL", "Excel (Advanced)", "Tableau", "PowerBI", "Google Looker Studio", "Python (Pandas)"],
+                syllabus: [
+                    {
+                        title: "Module 1: Data Analytics Foundations & Advanced Excel",
+                        content: ["Data analytics lifecycle and business metrics (KPIs)", "Advanced Excel functions: VLOOKUP/XLOOKUP, Pivot Tables, Power Query", "Descriptive analysis and summarizing insights textually and visually"]
+                    },
+                    {
+                        title: "Module 2: Database Querying with SQL",
+                        content: ["Relational database concepts, database design fundamentals", "Writing complex queries: SELECT, WHERE, GROUP BY, HAVING, subqueries", "Optimizing queries and using CTEs (Common Table Expressions)"]
+                    },
+                    {
+                        title: "Module 3: Visual Analytics & Dashboard Engineering",
+                        content: ["Principles of human visual perception and effective charts", "Developing interactive dashboards in Tableau and PowerBI", "Connecting visual dashboards to live database backends"]
+                    },
+                    {
+                        title: "Module 4: Presenting Data Stories",
+                        content: ["Executive communication: Presenting data findings to stakeholders", "Cohort analysis, funnel analytics, and attribution modeling", "Automating reports and dashboard delivery schedules"]
+                    }
+                ]
+            },
+            "cyber-security": {
+                title: "Cyber Security & Ethical Hacking",
+                description: "Defend digital infrastructure against modern threat vectors. Learn defensive security, penetration testing, network monitoring, incident response, and security operations center workflows.",
+                duration: "20 Weeks",
+                level: "Intermediate",
+                format: "Live Online & Sandboxed Labs",
+                capstone: "Simulated Enterprise Security Audit & Incident Response",
+                tools: ["Kali Linux", "Wireshark", "Metasploit", "Nmap", "Burp Suite", "Splunk", "Snort", "Linux CLI"],
+                syllabus: [
+                    {
+                        title: "Module 1: Networking Foundations & Security Architecture",
+                        content: ["TCP/IP protocols, subnetting, routing, and DNS architecture", "Firewalls, IDS/IPS configurations, and secure network design", "Linux and Windows administration with security hardening guidelines"]
+                    },
+                    {
+                        title: "Module 2: Penetration Testing & Vulnerability Assessment",
+                        content: ["Information gathering, footprinting, and active scanning (Nmap)", "Exploitation frameworks (Metasploit) and post-exploitation techniques", "Web application vulnerability scanning (OWASP Top 10, Burp Suite)"]
+                    },
+                    {
+                        title: "Module 3: Defensive Operations & Incident Response",
+                        content: ["Security Information and Event Management (SIEM) tools like Splunk", "Log analysis, intrusion detection (Snort), and traffic packet analysis", "Incident response playbook development and digital forensics basics"]
+                    },
+                    {
+                        title: "Module 4: Cryptography & Compliance Frameworks",
+                        content: ["Symmetric and asymmetric encryption, hashing, and PKI infrastructure", "Security standards: ISO 27001, SOC 2, NIST Framework, and GDPR", "Social engineering concepts and security awareness training implementation"]
+                    }
+                ]
+            },
+            "full-stack": {
+                title: "Full Stack Software Development",
+                description: "Build robust, responsive, and secure web applications. From visual front-end engineering using React to backend servers, API designs, databases, and continuous integration workflows.",
+                duration: "24 Weeks",
+                level: "Beginner to Advanced",
+                format: "Live Online & Hackathons",
+                capstone: "Full Stack SaaS Application with Payment Gateway & Auth",
+                tools: ["HTML5 / CSS3", "JavaScript (ES6+)", "React.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Git & GitHub"],
+                syllabus: [
+                    {
+                        title: "Module 1: Front-End UI Architecture & Styling",
+                        content: ["HTML5 semantic tags, CSS3 grids, flexbox, and responsive design layouts", "Modern CSS methodologies: Sass, CSS custom variables, and TailwindCSS", "Vanilla JavaScript: DOM manipulation, asynchronous programming (Promises, async/await)"]
+                    },
+                    {
+                        title: "Module 2: Modern Front-End Frameworks (React)",
+                        content: ["React hooks, state management (Redux Toolkit or Context API)", "Routing, form validation, and component-driven development", "Consuming REST APIs and handling client-side state caching"]
+                    },
+                    {
+                        title: "Module 3: Back-End Systems & API Architecture",
+                        content: ["Node.js runtime environment and Express.js framework", "Designing RESTful API routing, middleware implementation, and authentication (JWT)", "Database modeling: SQL (PostgreSQL) vs NoSQL (MongoDB) schemas"]
+                    },
+                    {
+                        title: "Module 4: Cloud Infrastructure & CI/CD",
+                        content: ["Deploying front-end applications (Vercel) and back-ends (Render/Heroku/AWS)", "Continuous Integration/Continuous Deployment (CI/CD) pipelines with GitHub Actions", "Testing methodologies: Unit tests (Jest) and integration testing"]
+                    }
+                ]
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Dynamic Particles in Hero Section
+            initHeroParticles();
+
+            // 2. Navbar Scroll Behavior
+            initNavbarScroll();
+
+            // 3. Dynamic Course Tabs Selector
+            initCourseSelector();
+
+            // 4. Counters Animation (Intersection Observer)
+            initStatsCounters();
+
+            // 5. Scroll Animations (Intersection Observer)
+            initScrollAnimations();
+
+            // 6. Careers Page Job Filter
+            initJobBoardFilter();
+
+            // 7. Careers Form & Validation
+            initCareersForm();
+        });
+
+        /* ==========================================================================
+           1. Dynamic Particles in Hero Section
+           ========================================================================== */
+        function initHeroParticles() {
+            const container = document.querySelector(".hero-particles");
+            if (!container) return;
+
+            const particleCount = 25;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement("div");
+                particle.classList.add("hero-particle");
+
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+
+                const duration = Math.random() * 12 + 8;
+                const delay = Math.random() * 8;
+                particle.style.animation = `floatParticle ${duration}s infinite linear`;
+                particle.style.animationDelay = `-${delay}s`;
+
+                container.appendChild(particle);
+            }
+        }
+
+        /* ==========================================================================
+           2. Navbar Scroll Behavior
+           ========================================================================== */
+        function initNavbarScroll() {
+            const navbar = document.querySelector(".custom-navbar");
+            if (!navbar) return;
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+                // Close mobile nav on scroll
+                var navCollapse = document.getElementById("navbarNav");
+                if (navCollapse && navCollapse.classList.contains("show")) {
+                    navCollapse.classList.remove("show");
+                    var menuIcon = document.getElementById("menuIcon");
+                    if (menuIcon) {
+                        menuIcon.classList.remove("bi-x-lg");
+                        menuIcon.classList.add("bi-list");
+                    }
+                    var toggler = document.querySelector('.navbar-toggler');
+                    if (toggler) toggler.classList.add('collapsed');
+                }
+            });
+        }
+
+        /* ==========================================================================
+           3. Dynamic Course Tabs Selector
+           ========================================================================== */
+        function initCourseSelector() {
+            const tabButtons = document.querySelectorAll(".course-tab-btn");
+            const pane = document.getElementById("activeCoursePane");
+
+            if (tabButtons.length === 0 || !pane) return;
+
+            function updateCoursePane(courseKey) {
+                const data = coursesData[courseKey];
+                if (!data) return;
+
+                pane.style.opacity = 0;
+                pane.style.transform = "translateY(15px)";
+
+                setTimeout(() => {
+                    pane.querySelector(".pane-title").innerText = data.title;
+                    pane.querySelector(".pane-desc").innerText = data.description;
+
+                    pane.querySelector(".pane-duration").innerText = data.duration;
+                    pane.querySelector(".pane-level").innerText = data.level;
+                    pane.querySelector(".pane-format").innerText = data.format;
+                    pane.querySelector(".pane-capstone").innerText = data.capstone;
+
+                    const toolsContainer = pane.querySelector(".pane-tools-list");
+                    toolsContainer.innerHTML = "";
+                    data.tools.forEach(tool => {
+                        const badge = document.createElement("span");
+                        badge.classList.add("tool-badge");
+                        badge.innerText = tool;
+                        toolsContainer.appendChild(badge);
+                    });
+
+                    const accordionContainer = pane.querySelector(".pane-syllabus-accordion");
+                    accordionContainer.innerHTML = "";
+
+                    data.syllabus.forEach((module, index) => {
+                        const item = document.createElement("div");
+                        item.classList.add("accordion-item");
+
+                        const headerId = `heading-mod-${index}`;
+                        const collapseId = `collapse-mod-${index}`;
+
+                        item.innerHTML = `
+                    <h2 class="accordion-header" id="${headerId}">
+                        <button class="accordion-button ${index === 0 ? "" : "collapsed"}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${index === 0 ? "true" : "false"}" aria-controls="${collapseId}">
+                            ${module.title}
+                        </button>
+                    </h2>
+                    <div id="${collapseId}" class="accordion-collapse collapse ${index === 0 ? "show" : ""}" aria-labelledby="${headerId}" data-bs-parent=".pane-syllabus-accordion">
+                        <div class="accordion-body">
+                            <ul class="syllabus-topic-list">
+                                ${module.content.map(topic => `<li>${topic}</li>`).join("")}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                        accordionContainer.appendChild(item);
+                    });
+
+                    pane.style.opacity = 1;
+                    pane.style.transform = "translateY(0)";
+                }, 300);
+            }
+
+            updateCoursePane("ai-ml");
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    tabButtons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const targetCourse = btn.getAttribute("data-course");
+                    updateCoursePane(targetCourse);
+                });
+            });
+
+            const externalTriggers = document.querySelectorAll("[data-course-select]");
+            externalTriggers.forEach(trigger => {
+                trigger.addEventListener("click", () => {
+                    const courseKey = trigger.getAttribute("data-course-select");
+                    const targetBtn = document.querySelector(`.course-tab-btn[data-course="${courseKey}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                    }
+                });
+            });
+        }
+
+        /* ==========================================================================
+           4. Counters Animation (Intersection Observer)
+           ========================================================================== */
+        function initStatsCounters() {
+            const counters = document.querySelectorAll(".stat-number");
+            if (counters.length === 0) return;
+
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: "0px"
+            };
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute("data-target"), 10);
+                        const duration = 2000;
+                        const startTime = performance.now();
+
+                        function updateCount(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+
+                            const easeProgress = progress * (2 - progress);
+                            const currentCount = Math.floor(easeProgress * target);
+
+                            const suffix = counter.getAttribute("data-suffix") || "";
+                            counter.innerText = currentCount + suffix;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.innerText = target + suffix;
+                            }
+                        }
+
+                        requestAnimationFrame(updateCount);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        }
+
+        /* ==========================================================================
+           5. Scroll Animations (Intersection Observer)
+           ========================================================================== */
+        function initScrollAnimations() {
+            const animElements = document.querySelectorAll(".animate-on-scroll");
+            if (animElements.length === 0) return;
+
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px"
+            };
+
+            const animObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animated");
+                    }
+                });
+            }, observerOptions);
+
+            animElements.forEach(el => {
+                animObserver.observe(el);
+            });
+        }
+
+        /* ==========================================================================
+           6. Careers Page Job Filter
+           ========================================================================== */
+        function initJobBoardFilter() {
+            const filterButtons = document.querySelectorAll("#jobFilterContainer .course-tab-btn");
+            const jobCards = document.querySelectorAll("#jobListingsContainer .job-item-card");
+            const applyButtons = document.querySelectorAll(".btn-apply-trigger");
+            const jobSelect = document.getElementById("careersJobSelect");
+
+            if (filterButtons.length === 0 || jobCards.length === 0) return;
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    filterButtons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filterVal = btn.getAttribute("data-job-filter");
+
+                    jobCards.forEach(card => {
+                        const category = card.getAttribute("data-job-category");
+
+                        if (filterVal === "all" || category === filterVal) {
+                            card.style.display = "block";
+                            setTimeout(() => {
+                                card.style.opacity = "1";
+                                card.style.transform = "translateY(0)";
+                            }, 50);
+                        } else {
+                            card.style.opacity = "0";
+                            card.style.transform = "translateY(15px)";
+                            setTimeout(() => {
+                                card.style.display = "none";
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            if (applyButtons.length > 0 && jobSelect) {
+                applyButtons.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        const jobKey = btn.getAttribute("data-job-title");
+                        if (jobKey) {
+                            jobSelect.value = jobKey;
+                        }
+                    });
+                });
+            }
+        }
+
+        /* ==========================================================================
+           10. Careers Form & Validation
+           ========================================================================== */
+        function initCareersForm() {
+            const form = document.getElementById("careersForm");
+            const successOverlay = document.getElementById("careersSuccessOverlay");
+            const overlayClose = document.getElementById("careersOverlayCloseBtn");
+
+            if (!form || !successOverlay) return;
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const nameInput = document.getElementById("careersName");
+                const dobInput = document.getElementById("careersDob");
+                const emailInput = document.getElementById("careersEmail");
+                const phoneInput = document.getElementById("careersPhone");
+                const expSelect = document.getElementById("experience");
+                const passoutSelect = document.getElementById("passoutYear");
+                const positionSelect = document.getElementById("applyPosition");
+                const coverInput = document.getElementById("careersCover");
+                const resumeInput = document.getElementById("careersResume");
+                const agreeCheck = document.getElementById("careersAgreeCheck");
+
+                const nameError = document.getElementById("careersNameError");
+                const dobError = document.getElementById("careersDobError");
+                const emailError = document.getElementById("careersEmailError");
+                const phoneError = document.getElementById("careersPhoneError");
+                const expError = document.getElementById("experienceError");
+                const passoutError = document.getElementById("passoutYearError");
+                const positionError = document.getElementById("applyPositionError");
+                const agreeError = document.getElementById("careersAgreeError");
+
+                let isValid = true;
+
+                const allInputs = [nameInput, dobInput, emailInput, phoneInput, expSelect, passoutSelect, positionSelect];
+                allInputs.forEach(input => {
+                    if (input) input.classList.remove("error");
+                });
+                const errorSpans = [nameError, dobError, emailError, phoneError, expError, passoutError, positionError, agreeError];
+                errorSpans.forEach(span => {
+                    if (span) span.textContent = "";
+                });
+                const checkboxBox = document.querySelector(".checkbox-box");
+                if (checkboxBox) checkboxBox.style.borderColor = "";
+                const resumeWarning = document.getElementById("resumeWarning");
+                if (resumeWarning) resumeWarning.style.display = "none";
+
+                const nameRegex = /^[a-zA-Z\s.'-]+$/;
+                if (!nameInput.value.trim()) {
+                    nameError.textContent = "Please enter your full name";
+                    nameInput.classList.add("error");
+                    isValid = false;
+                } else if (!nameRegex.test(nameInput.value.trim())) {
+                    nameError.textContent = "Please enter a valid name (letters only)";
+                    nameInput.classList.add("error");
+                    isValid = false;
+                }
+
+                if (!dobInput.value) {
+                    dobError.textContent = "Please select your date of birth";
+                    dobInput.classList.add("error");
+                    isValid = false;
+                } else if (new Date(dobInput.value) > new Date()) {
+                    dobError.textContent = "Date of birth cannot be in the future";
+                    dobInput.classList.add("error");
+                    isValid = false;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailInput.value.trim()) {
+                    emailError.textContent = "Please enter your email address";
+                    emailInput.classList.add("error");
+                    isValid = false;
+                } else if (!emailRegex.test(emailInput.value.trim())) {
+                    emailError.textContent = "Please enter a valid email address";
+                    emailInput.classList.add("error");
+                    isValid = false;
+                }
+
+                const phoneClean = phoneInput.value.trim().replace(/[\s\-\(\)]/g, '');
+                const phoneRegex = /^[0-9]{10,15}$/;
+                if (!phoneInput.value.trim()) {
+                    phoneError.textContent = "Please enter your contact number";
+                    phoneInput.classList.add("error");
+                    isValid = false;
+                } else if (!phoneRegex.test(phoneClean)) {
+                    phoneError.textContent = "Please enter a valid phone number (10-15 digits)";
+                    phoneInput.classList.add("error");
+                    isValid = false;
+                }
+
+                if (!resumeInput || !resumeInput.files || !resumeInput.files[0]) {
+                    if (resumeWarning) {
+                        resumeWarning.textContent = "Please upload your Resume/CV. This field is required.";
+                        resumeWarning.style.display = "block";
+                    }
+                    isValid = false;
+                }
+
+                if (!expSelect.value) {
+                    expError.textContent = "Please select your experience";
+                    expSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                if (!passoutSelect.value) {
+                    passoutError.textContent = "Please select year of pass out";
+                    passoutSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                if (!positionSelect.value) {
+                    positionError.textContent = "Please select a position";
+                    positionSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                if (agreeCheck && !agreeCheck.checked) {
+                    agreeError.textContent = "Please accept the declaration";
+                    if (checkboxBox) {
+                        checkboxBox.style.borderColor = "#dc3545";
+                    }
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    var firstErr = form.querySelector('.error');
+                    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                if (isValid) {
+                    const ok = await submitFormWithFile(
+                        {
+                            formType: 'careers',
+                            data: {
+                                careersName: nameInput.value.trim(),
+                                careersDob: dobInput.value,
+                                careersEmail: emailInput.value.trim(),
+                                careersPhone: phoneInput.value.trim(),
+                                experience: expSelect.value,
+                                passoutYear: passoutSelect.value,
+                                applyPosition: positionSelect.value,
+                                coverLetter: coverInput ? coverInput.value.trim() : '',
+                            }
+                        },
+                        document.getElementById("careersResume")
+                    );
+                    if (ok) {
+                        successOverlay.classList.add("active");
+                        form.reset();
+                        setTimeout(function () { successOverlay.classList.remove("active"); }, 3000);
+                    }
+                }
+            });
+
+            form.addEventListener("input", function(e) {
+                const field = e.target;
+                if (field && field.classList) {
+                    field.classList.remove("error");
+                    const errorMap = {
+                        careersName: "careersNameError",
+                        careersDob: "careersDobError",
+                        careersEmail: "careersEmailError",
+                        careersPhone: "careersPhoneError",
+                        experience: "experienceError",
+                        passoutYear: "passoutYearError",
+                        applyPosition: "applyPositionError"
+                    };
+                    const errorEl = document.getElementById(errorMap[field.id]);
+                    if (errorEl) errorEl.textContent = "";
+                }
+            });
+
+            if (overlayClose) {
+                overlayClose.addEventListener("click", () => {
+                    successOverlay.classList.remove("active");
+                });
+            }
+        }
+    </script>
+    <div class="scroll-progress" id="scrollProgress">
+        <svg viewBox="0 0 40 40">
+            <circle class="progress-bg" cx="20" cy="20" r="17" />
+            <circle class="progress-fill" id="progressFill" cx="20" cy="20" r="17" />
+        </svg>
+    </div>
+    <a href="https://wa.me/919121912138?text=Hi%20Gensar%20Group%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+</body>
+
+</html>

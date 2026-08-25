@@ -1,0 +1,58 @@
+import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { jobs } from "@/lib/db/schema";
+import { jobSchema } from "@/lib/validations";
+import { NextResponse } from "next/server";
+import { eq } from "drizzle-orm";
+
+export const runtime = "nodejs";
+
+export async function GET(_req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const session = await auth();
+  if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const { id } = await params;
+  const [job] = await db.select().from(jobs).where(eq(jobs.id, Number(id))).limit(1);
+  if (!job) return NextResponse.json({ error: "Job not found" }, { status: 404 });
+  return NextResponse.json(job);
+}
+
+export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const session = await auth();
+  if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  try {
+    const { id } = await params;
+    const body = await req.json();
+    const parsed = jobSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Invalid input", details: parsed.error.flatten() }, { status: 400 });
+    }
+
+    const [existing] = await db.select().from(jobs).where(eq(jobs.id, Number(id))).limit(1);
+    if (!existing) return NextResponse.json({ error: "Job not found" }, { status: 404 });
+
+    const [result] = await db
+      .update(jobs)
+      .set({ ...parsed.data, updatedAt: new Date() })
+      .where(eq(jobs.id, Number(id)))
+      .returning();
+
+    return NextResponse.json(result);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to update job";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+export async function DELETE(_req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const session = await auth();
+  if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const { id } = await params;
+  const [existing] = await db.select().from(jobs).where(eq(jobs.id, Number(id))).limit(1);
+  if (!existing) return NextResponse.json({ error: "Job not found" }, { status: 404 });
+
+  await db.delete(jobs).where(eq(jobs.id, Number(id)));
+  return NextResponse.json({ message: "Job deleted successfully" });
+}

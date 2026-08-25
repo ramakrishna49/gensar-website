@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon-16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Gensar Academy & Consulting - IT Services, Non-IT Services & Staffing Solutions. Industry-focused training and internship programs in AI & ML, Data Science, Cyber Security, and more. Inventing Better Future.">
+    <meta name="keywords" content="internship, AI ML training, data science course, cyber security training, full stack development, Gensar academy, Hyderabad, IT services, non-IT services, staffing, shine with gensar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Internship Programs - Gensar Academy | IT, Non-IT & Staffing">
+    <meta property="og:description" content="Explore Gensar Academy - IT Services, Non-IT Services & Staffing Solutions. Industry-focused training and internship programs.">
+    <meta property="og:image" content="img/gensar_logo.png">
+    <meta property="og:type" content="website">
+    <title>Internship Programs - Gensar Academy | IT, Non-IT & Staffing Solutions</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ip-hero {
+            min-height: auto;
+            padding: 140px 0 60px;
+            background: url('img/Internships.png') no-repeat center center / cover;
+            position: relative;
+        }
+
+        .ip-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ip-hero .ip-content {
+            max-width: 620px;
+        }
+
+        .ip-hero .ip-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 0 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(181, 138, 227, 0.2);
+        }
+
+        .ip-hero .ip-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #3A2E5B;
+            font-weight: 500;
+        }
+
+        .ip-hero .ip-feature i {
+            font-size: 1.1rem;
+            color: #B58AE3;
+            width: 20px;
+        }
+
+        @media (max-width: 991px) {
+            .ip-hero {
+                padding: 120px 0 50px;
+            }
+
+            .ip-hero .ip-content {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .ip-hero {
+                padding: 130px 0 40px;
+            }
+
+            .ip-hero .ip-features {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ip-hero {
+                padding: 120px 0 30px;
+            }
+
+            .ip-hero .ip-feature {
+                font-size: 0.78rem;
+            }
+        }
+
+        /* Validation */
+
+        .form-input-custom.error {
+            border: 2px solid #ff4d4f !important;
+            box-shadow: 0 0 0 3px rgba(255, 77, 79, .15);
+        }
+
+        .form-input-custom.success {
+            border: 2px solid #28a745 !important;
+        }
+
+        .error-message {
+            color: #ff4d4f;
+            font-size: 13px;
+            margin-top: 6px;
+            display: block;
+        }
+
+        .checkbox-custom.error {
+            color: #ff4d4f;
+        }
+
+        .checkbox-custom.error .checkbox-box {
+            border: 2px solid #ff4d4f;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/gensar_logo.png" alt="Gensar Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list" id="menuIcon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our-services.html">Services</a>
+                    </li>
+                    <!-- Courses Dropdown Menu -->
+                    <li class="nav-item dropdown custom-dropdown ">
+                        <a class="nav-link dropdown-toggle active" href="gensar-consulting.html" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#ai-ml" data-course-select="ai-ml">AI &
+                                    ML</a></li>
+                            <li><a class="dropdown-item" href="#data-science"
+                                    data-course-select="data-science">Data Science</a></li>
+                            <li><a class="dropdown-item" href="#data-analytics"
+                                    data-course-select="data-analytics">Data Analytics</a></li>
+                            <li><a class="dropdown-item" href="#cyber-security"
+                                    data-course-select="cyber-security">Cyber Security</a></li>
+                            <li><a class="dropdown-item" href="#full-stack"
+                                    data-course-select="full-stack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hire-us.html">Find Talent</a>
+                    </li>
+                </ul>
+                <a href="get-in-touch.html" class="contact-btn">
+                    <i class="bi bi-send-fill me-2"></i>Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Internship Hero -->
+    <header class="hero-section ip-hero">
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="ip-content animate-on-scroll">
+                <span class="hero-tag mb-3">Internship Program</span>
+                <div class="section-heading-wrapper">
+                    <h1 class="hero-title">Launch Your Career With <span class="text-gradient-purple">Real-World
+                            Experience</span></h1>
+                    <div class="divider"></div>
+                </div>
+                <p class="hero-desc">Gain real-world experience, develop in-demand skills, and kickstart your career
+                    with our industry-focused internship programs.</p>
+                <div class="ip-features">
+                    <div class="ip-feature"><i class="bi bi-person-workspace"></i> Real World Experience</div>
+                    <div class="ip-feature"><i class="bi bi-graph-up-arrow"></i> Skill Development</div>
+                    <div class="ip-feature"><i class="bi bi-people"></i> Mentorship & Guidance</div>
+                    <div class="ip-feature"><i class="bi bi-briefcase"></i> Career Opportunities</div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#course-explorer" class="btn-premium btn-premium-primary">Explore Opportunities <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: STATS / HIGHLIGHTS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient-purple" data-target="95" data-suffix="%">0%</div>
+                        <div class="stat-label">Program Completion Rate</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient-cyan" data-target="10" data-suffix="k+">0k+</div>
+                        <div class="stat-label">Students Trained</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient-purple" data-target="1500" data-suffix="+">0+</div>
+                        <div class="stat-label">Internships Completed</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <div class="stat-card">
+                        <div class="stat-number text-gradient-cyan" data-target="300" data-suffix="+">0+</div>
+                        <div class="stat-label">Hiring & Industry Partners</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 & 4: COURSE SELECTOR & SYLLABUS DEEP DIVE -->
+    <section id="course-explorer" class="section-padding">
+        <div class="gradient-bg-blob"></div>
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-right">
+                <span class="section-subtitle">Academic Suite</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">Select Your <span class="text-gradient-purple">Career Trajectory</span>
+                    </h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    Click through our five core consulting verticals to review durations, target tech stacks, and
+                    step-by-step module breakdowns.
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="row mb-5 justify-content-center anim-fade from-right">
+                <div class="col-12">
+                    <div class="course-tabs-nav">
+                        <button class="course-tab-btn active" data-course="ai-ml">AI & Machine Learning</button>
+                        <button class="course-tab-btn" data-course="data-science">Data Science</button>
+                        <button class="course-tab-btn" data-course="data-analytics">Data Analytics</button>
+                        <button class="course-tab-btn" data-course="cyber-security">Cyber Security</button>
+                        <button class="course-tab-btn" data-course="full-stack">Full Stack Dev</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Detail Pane (Dynamic) -->
+            <div class="row anim-fade from-right delay-100">
+                <div class="col-12">
+                    <div class="course-detail-pane" id="activeCoursePane" style="transition: all 0.3s ease;">
+                        <div class="row gy-4">
+                            <!-- Course Stats & Details Left Column -->
+                            <div class="col-lg-6">
+                                <h3 class="pane-title text-gradient-cyan mb-3">Artificial Intelligence & Machine
+                                    Learning</h3>
+                                <p class="pane-desc text-secondary mb-4">
+                                    Master the algorithms, mathematics, and systems required to build intelligent
+                                    applications. From deep learning neural networks to natural language processing and
+                                    computer vision.
+                                </p>
+
+                                <div class="course-meta-grid">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Duration</span>
+                                        <span class="meta-value pane-duration">24 Weeks</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Skill Level</span>
+                                        <span class="meta-value pane-level">Advanced</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Format</span>
+                                        <span class="meta-value pane-format">Live Online & Labs</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="text-gradient-purple mb-2">Capstone Focus</h5>
+                                    <p class="text-secondary pane-capstone" style="font-size: 0.95rem;">
+                                        Autonomous Agent & Predictive Analytics Suite
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-light light1 mb-3">Technologies & Toolsets</h5>
+                                    <div class="tools-list pane-tools-list">
+                                        <!-- Tool badges will load here -->
+                                        <span class="tool-badge">Python</span>
+                                        <span class="tool-badge">PyTorch</span>
+                                        <span class="tool-badge">TensorFlow</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Course Modules Accordion Right Column -->
+                            <div class="col-lg-6">
+                                <h4 class="text-light light1 mb-4">Syllabus Breakdown</h4>
+                                <div class="accordion syllabus-accordion pane-syllabus-accordion"
+                                    id="syllabusAccordion">
+                                    <!-- Accordion items loaded dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: KEY ECOSYSTEM FEATURES -->
+    <section class="section-padding bg-dark-secondary">
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-left">
+                <span class="section-subtitle">Gensar Advantage</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">Explore Our Training & <span class="text-gradient-purple">Internship
+                            Programs</span></h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    Build industry-ready skills through expert training and hands-on internship experiences.
+                </p>
+            </div>
+
+            <div class="row gy-4 mt-2">
+                <div class="col-lg-3 col-md-6 anim-fade from-left">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <h3>Industry-Focused Training</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">
+                            Master in-demand technologies aligned with current industry requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 anim-fade from-left delay-100">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h3>Real-Time Internship Experience</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">
+                            Gain practical exposure through live projects and real-world assignments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 anim-fade from-left delay-200">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-briefcase-fill"></i>
+                        </div>
+                        <h3>Expert Mentorship & Career Guidance</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">
+                            Learn from industry experts with personalized mentoring and career support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 anim-fade from-left delay-300">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h3>Placement Assistance & Certification</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">
+                            Boost your career prospects with certifications and placement assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: TIMELINE / LEARNING JOURNEY -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-right">
+                <span class="section-subtitle">The Roadmap</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">Your Journey to <span class="text-gradient-purple"> Career Success</span>
+                    </h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    A structured learning pathway designed to transform beginners into industry-ready professionals
+                    through training, internships, projects, and placement support.
+                </p>
+            </div>
+
+            <div class="journey-timeline mt-5">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">1</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 01</span>
+                        <h4>Foundation & Skill Building</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Build strong fundamentals in programming, analytical thinking, communication skills, and
+                            industry-relevant concepts to create a solid learning foundation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">2</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 02 - 03</span>
+                        <h4>Advanced Learning & Practical Labs</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Master domain-specific technologies through hands-on labs, real-world case studies,
+                            guided exercises, and industry-focused projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">3</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 04</span>
+                        <h4>Internship & Live Projects</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Work on real-time projects, collaborate with teams, and gain practical industry exposure
+                            through guided internship experiences.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">4</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 05</span>
+                        <h4>Capstone Project & Portfolio Development</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Develop an end-to-end project showcasing your technical expertise while building a
+                            professional portfolio that stands out to employers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">5</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 06+</span>
+                        <h4>Career Preparation & Placement Assistance</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Prepare for job opportunities through resume building, mock interviews, aptitude training,
+                            soft-skills development, and placement support.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item anim-fade from-right">
+                    <div class="timeline-badge">6</div>
+                    <div class="timeline-card">
+                        <span class="timeline-step">Month 06+</span>
+                        <h4>Job Placement & Alumni Network</h4>
+                        <p class="text-secondary mb-0" style="font-size: 0.9rem;">
+                            Connect with hiring partners, explore career opportunities, and become part of our growing
+                            professional alumni network for continuous growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title-container text-center anim-fade from-right">
+                <span class="section-subtitle">Information desk</span>
+                <div class="section-heading-wrapper">
+                    <h2 class="section-title">Frequently Asked <span class="text-gradient-purple">Questions</span></h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="text-secondary max-w-600 mx-auto mt-3">
+                    Have questions about admissions, hardware requirements, or our career desk? Here are quick answers.
+                </p>
+            </div>
+
+            <div class="row justify-content-center anim-fade from-right">
+                <div class="col-lg-8">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq-h1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-c1" aria-expanded="true" aria-controls="faq-c1">
+                                    Are these courses suitable for complete tech beginners?
+                                </button>
+                            </h2>
+                            <div id="faq-c1" class="accordion-collapse collapse show" aria-labelledby="faq-h1"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our Full Stack Development and Data Analytics courses start from absolute
+                                    foundations and are ideal for career switchers. However, the AI & Machine Learning
+                                    and Cybersecurity paths require some basic prior coding knowledge (e.g.,
+                                    intermediate Python or network fundamentals).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq-h2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-c2" aria-expanded="false" aria-controls="faq-c2">
+                                    How does the 1-on-1 mentorship model operate?
+                                </button>
+                            </h2>
+                            <div id="faq-c2" class="accordion-collapse collapse" aria-labelledby="faq-h2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You will be matched with a dedicated mentor who is an active industry practitioner.
+                                    You'll have a recurring weekly 1-on-1 screen-share session to review your code
+                                    reviews, solve blockages, refactor architecture, and run through career mapping.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq-h3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-c3" aria-expanded="false" aria-controls="faq-c3">
+                                    Do I receive a certificate upon graduation?
+                                </button>
+                            </h2>
+                            <div id="faq-c3" class="accordion-collapse collapse" aria-labelledby="faq-h3"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, upon successful completion of your modules and approval of your Capstone
+                                    Project from our review board, you will receive a cryptographically verified
+                                    certificate from Consulting.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq-h4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-c4" aria-expanded="false" aria-controls="faq-c4">
+                                    What is the admission and selection process?
+                                </button>
+                            </h2>
+                            <div id="faq-c4" class="accordion-collapse collapse" aria-labelledby="faq-h4"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    To apply, submit the form below. Selected candidates are scheduled for a brief
+                                    technical and motivational screening call with an admissions advisor to ensure they
+                                    are aligned with the program rigor.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: APPLICATION & CONSULTATION FORM -->
+    <section id="consultation" class="section-padding bg-dark-secondary">
+        <div class="container">
+            <div class="cta-container anim-fade from-left">
+                <div class="cta-glow-decor"></div>
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-5 text-center text-lg-start cta-form-wrapper">
+                        <span class="hero-tag mb-3"
+                            style="color: var(--color-primary); background: rgba(139, 92, 246, 0.08); border-color: rgba(139, 92, 246, 0.2);">
+                            STUDENT REGISTRATION</span>
+                        <h2 class="text-gradient-purple display-6 fw-bold mb-3">Start Your Learning Journey</h2>
+                        <p class="text-secondary">
+                            Complete the registration form and take the first step toward building a successful career
+                            through our industry-focused training and internship programs.
+                        </p>
+                        <div class="mt-4">
+                            <p
+                                class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 text-secondary">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i> Industry-Relevant Training
+                                Programs
+                            </p>
+                            <p
+                                class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 text-secondary">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i> Hands-On Internship
+                                Experience
+                            </p>
+                            <p
+                                class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 text-secondary">
+                                <i class="bi bi-check-circle-fill" style="color:#B58AE3"></i>Placement Assistance for
+                                Eligible Candidates
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 cta-form-wrapper">
+                        <form id="consultationForm" novalidate style="position: relative;">
+
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" class="form-input-custom"
+                                            placeholder="Enter your full name" required>
+                                        <span class="error-message" id="fullNameError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="emailAddr">Email Address</label>
+                                        <input type="email" id="emailAddr" class="form-input-custom"
+                                            placeholder="Enter your email address" required>
+                                        <span class="error-message" id="emailAddrError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="phoneNum">Phone Number</label>
+                                        <input type="tel" id="phoneNum" class="form-input-custom"
+                                            placeholder="Enter your contact number" inputmode="numeric" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+                                        <span class="error-message" id="phoneNumError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="qualification">Highest Qualification</label>
+                                        <select id="qualification" class="form-input-custom form-select-custom"
+                                            required>
+
+                                            <option value="" selected disabled>
+                                                Select your qualification
+                                            </option>
+                                            <option>10th</option>
+                                            <option>Intermediate</option>
+                                            <option>Diploma</option>
+                                            <option>ITI</option>
+                                            <option>B.Tech</option>
+                                            <option>B.Sc</option>
+                                            <option>B.Com</option>
+                                            <option>BCA</option>
+                                            <option>M.Tech</option>
+                                            <option>MCA</option>
+                                            <option>MBA</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <span class="error-message" id="qualificationError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="interestCourse">Course of Interest</label>
+
+                                        <select id="interestCourse" class="form-input-custom form-select-custom"
+                                            required>
+
+                                            <option value="" selected disabled>
+                                                Choose a Program
+                                            </option>
+                                            <option>AI &amp; Machine Learning</option>
+                                            <option>Data Science &amp; Predictive Modeling</option>
+                                            <option>Data Analytics &amp; Business Intelligence</option>
+                                            <option>Cyber Security &amp; Ethical Hacking</option>
+                                            <option>Full Stack Web Development</option>
+                                            <option>UI/UX Design</option>
+                                        </select>
+                                        <span class="error-message" id="interestCourseError"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="learningMode">Preferred Learning Mode</label>
+
+                                        <select id="learningMode" class="form-input-custom form-select-custom" required>
+
+                                            <option value="" selected disabled>
+                                                Online / Offline / Hybrid
+                                            </option>
+                                            <option>Online</option>
+                                            <option>Offline</option>
+                                            <option>Hybrid</option>
+                                        </select>
+                                        <span class="error-message" id="learningModeError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 4 -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group-custom">
+                                        <label for="collegeName">
+                                            College / University Name (Optional)
+                                        </label>
+
+                                        <input type="text" id="collegeName" class="form-input-custom"
+                                            placeholder="Enter your institution name">
+                                        <span class="error-message" id="collegeNameError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Consent -->
+                            <div class="form-group-custom my-4">
+                                <label class="checkbox-custom">
+                                    <input type="checkbox" id="agreeCheck" required>
+                                    <span class="checkbox-box"></span>
+                                    <span>
+                                        I agree to receive updates regarding training programs,
+                                        internships, workshops, and placement opportunities from
+                                        Gensar.
+                                    </span>
+                                </label>
+                                <span class="error-message" id="agreeCheckError"></span>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn-premium btn-premium-primary w-100 justify-content-center">
+
+                                Register Now
+                                <i class="bi bi-send-fill ms-2"></i>
+
+                            </button>
+
+                        <!-- Success Overlay UI -->
+                        <div class="form-success-overlay" id="formSuccessOverlay">
+                            <div class="success-icon">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+                            <h3 class="text-gradient-cyan mb-2">Request Submitted!</h3>
+                            <p class="text-secondary max-w-400 mb-4">
+                                Thank you! Your request has been submitted successfully.
+                            </p>
+                            <button id="overlayCloseBtn" class="btn-premium btn-premium-secondary">
+                                Back to Page
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-premium">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+
+                        <img src="img/Gensar Main Logo 2400x1800.jpg.jpeg" alt="Gensar IT Solution" class="footer-logo">
+
+                        <p class="footer-about">
+                            Gensar IT Solution empowers businesses with innovative IT solutions,
+                            staffing services, corporate training, and digital transformation
+                            strategies that drive measurable growth and long-term success. We also
+                            provide comprehensive Non-IT business services including BPO, KPO,
+                            healthcare operations, customer experience solutions, and back-office
+                            processing to streamline your business operations.
+                        </p>
+
+                        <div class="footer-social" style="text-align:center;">
+                            <a href="https://www.linkedin.com/company/gensar-group/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/gensar_group/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 footer-quick-links">
+                    <h5 class="footer-title">Quick Links</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="our-services.html">Services</a></li>
+                        <li><a href="gensar-consulting.html">Courses</a></li>
+                        <li><a href="gensar-consulting.html">Internship</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="hire-us.html">Find Talent</a></li>
+                        <li><a href="get-in-touch.html">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 footer-services">
+                    <h5 class="footer-title">Services</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="our-services.html">IT Solutions</a></li>
+                        <li><a href="our-services.html">Non-IT Services</a></li>
+                        <li><a href="hire-us.html">Staffing Solutions</a></li>
+                        <li><a href="gensar-consulting.html">Corporate Training</a></li>
+                        <li><a href="gensar-consulting.html">AI & Data Services</a></li>
+                        <li><a href="gensar-consulting.html">Cyber Security</a></li>
+                        <li><a href="gensar-consulting.html">Cloud Services</a></li>
+                        <li><a href="gensar-consulting.html">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations -->
+                <div class="col-lg-3 col-md-6 footer-services">
+                    <h5 class="footer-title">Our Locations</h5>
+
+                    <div class="footer-location">
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Hyderabad</strong>
+                            Manjeera Trinity, 402, 4th floor, KPHB, Hyderabad – 500072
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Bangalore</strong>
+                            #824, 1st Block HRBR Layout,
+                            5th A Cross, Kalyan Nagar, Bangalore,
+                            Karnataka -560043
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>USA</strong>
+                            1760 Reston Parkway, Reston, VA 20190, USA
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Dubai</strong>
+                            Prime Business centre- AI Barsha South Fourth- Jumeirah Village Circle- Dubai- United Arab
+                            Emirates
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h4>Stay Updated With Gensar</h4>
+                        <p>Get updates on services, hiring opportunities, and training programs.</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form class="newsletter-form">
+                            <input type="text" class="newsletter-name" placeholder="Your name" pattern="[a-zA-Z\s.'-]+" title="Letters only">
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+
+                    <p>
+                        © 2026 Gensar IT Solution. All Rights Reserved.
+                    </p>
+
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+    <script>
+        /**
+ * Consulting - Interactive Courses Hub JS
+ */
+
+        // Course Database for Dynamic Tab Swapping
+        const coursesData = {
+            "ai-ml": {
+                title: "Artificial Intelligence & Machine Learning",
+                description: "Master the technologies, algorithms, and frameworks that power modern intelligent systems. Gain hands-on experience in Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, and Generative AI through real-world projects and industry-focused training.",
+                duration: "6 Months",
+                level: "Beginner to Advanced",
+                format: "Offline & Online",
+                capstone: "Dedicated placement assistance for top-performing and highly skilled candidates, including resume building, mock interviews, aptitude preparation, technical interview guidance, and job referrals.",
+                tools: [
+                    "Python",
+                    "PyTorch",
+                    "TensorFlow",
+                    "Scikit-learn",
+                    "Pandas",
+                    "NumPy",
+                    "Hugging Face",
+                    "OpenCV",
+                    "LangChain",
+                    "Docker",
+                    "AWS SageMaker",
+                    "Git & GitHub"
+                ],
+                syllabus: [
+                    {
+                        title: "Module 1: Foundations of Mathematics & Python for AI",
+                        content: [
+                            "Python Programming Fundamentals",
+                            "Data Structures & Algorithms",
+                            "Linear Algebra for Machine Learning",
+                            "Statistics & Probability",
+                            "NumPy & Pandas",
+                            "Data Visualization Techniques"
+                        ]
+                    },
+                    {
+                        title: "Module 2: Machine Learning & Supervised Models",
+                        content: [
+                            "Introduction to Machine Learning",
+                            "Data Preprocessing & Feature Engineering",
+                            "Regression Algorithms",
+                            "Classification Algorithms",
+                            "Model Evaluation & Validation",
+                            "Real-World Machine Learning Projects"
+                        ]
+                    },
+                    {
+                        title: "Module 3: Deep Learning & Neural Networks",
+                        content: [
+                            "Artificial Neural Networks (ANN)",
+                            "TensorFlow & PyTorch",
+                            "Convolutional Neural Networks (CNN)",
+                            "Transfer Learning",
+                            "Image Recognition Systems",
+                            "Deep Learning Project Development"
+                        ]
+                    },
+                    {
+                        title: "Module 4: Natural Language Processing & Large Language Models (LLMs)",
+                        content: [
+                            "NLP Fundamentals",
+                            "Text Processing & Tokenization",
+                            "Transformers Architecture",
+                            "Large Language Models (LLMs)",
+                            "Prompt Engineering",
+                            "Chatbot Development",
+                            "Hugging Face Ecosystem"
+                        ]
+                    },
+                    {
+                        title: "Module 5: Generative AI & Intelligent Applications",
+                        content: [
+                            "Introduction to Generative AI",
+                            "OpenAI & Modern AI APIs",
+                            "Retrieval-Augmented Generation (RAG)",
+                            "AI Agents & Automation",
+                            "LangChain Framework",
+                            "AI-Powered Business Applications"
+                        ]
+                    },
+                    {
+                        title: "Module 6: MLOps, Deployment & Career Preparation",
+                        content: [
+                            "Model Deployment with Flask & FastAPI",
+                            "Docker for AI Applications",
+                            "AWS AI Services",
+                            "Git & Version Control",
+                            "Resume Building & LinkedIn Optimization",
+                            "Mock Interviews & Placement Preparation",
+                            "Capstone Project & Certification"
+                        ]
+                    }
+                ]
+            },
+            "data-science": {
+                title: "Data Science",
+                description: "Master the art of transforming raw data into actionable insights. Learn statistics, data analysis, visualization, machine learning, and business intelligence through real-world projects and industry-focused training.",
+                duration: "6 Months",
+                level: "Beginner to Advanced",
+                format: "Offline & Online",
+                capstone: "Business Intelligence Dashboard & Predictive Analytics Solution",
+                tools: [
+                    "Python",
+                    "R Programming",
+                    "SQL",
+                    "Pandas",
+                    "NumPy",
+                    "Matplotlib",
+                    "Seaborn",
+                    "Scikit-learn",
+                    "Tableau",
+                    "Power BI",
+                    "Excel",
+                    "Jupyter Notebook",
+                    "Apache Spark",
+                    "AWS",
+                    "Git & GitHub"
+                ],
+                syllabus: [
+                    {
+                        title: "Module 1: Statistics, Python & SQL Fundamentals",
+                        content: [
+                            "Statistics & Probability for Data Science",
+                            "Python Programming Fundamentals",
+                            "Data Structures & Functions",
+                            "SQL for Data Analysis",
+                            "NumPy & Pandas",
+                            "Data Cleaning & Transformation"
+                        ]
+                    },
+                    {
+                        title: "Module 2: Exploratory Data Analysis (EDA)",
+                        content: [
+                            "Data Collection & Preparation",
+                            "Exploratory Data Analysis Techniques",
+                            "Data Wrangling & Feature Engineering",
+                            "Handling Missing Values & Outliers",
+                            "Data Visualization with Matplotlib & Seaborn",
+                            "Business Data Analysis Projects"
+                        ]
+                    },
+                    {
+                        title: "Module 3: Machine Learning for Data Science",
+                        content: [
+                            "Introduction to Machine Learning",
+                            "Supervised Learning Algorithms",
+                            "Unsupervised Learning Algorithms",
+                            "Model Training & Evaluation",
+                            "Regression & Classification Models",
+                            "Predictive Analytics Projects"
+                        ]
+                    },
+                    {
+                        title: "Module 4: Data Visualization & Business Intelligence",
+                        content: [
+                            "Dashboard Design Principles",
+                            "Tableau Fundamentals",
+                            "Power BI Development",
+                            "Interactive Reports & Storytelling",
+                            "KPI Tracking & Business Metrics",
+                            "Executive Dashboard Projects"
+                        ]
+                    },
+                    {
+                        title: "Module 5: Big Data & Cloud Analytics",
+                        content: [
+                            "Introduction to Big Data",
+                            "Apache Spark Fundamentals",
+                            "Cloud-Based Data Analytics",
+                            "AWS Data Services",
+                            "Data Pipelines & Automation",
+                            "Scalable Analytics Solutions"
+                        ]
+                    },
+                    {
+                        title: "Module 6: Industry Capstone & Career Preparation",
+                        content: [
+                            "End-to-End Data Science Project",
+                            "Business Case Study Analysis",
+                            "Resume Building & LinkedIn Optimization",
+                            "Mock Interviews & Technical Assessments",
+                            "Placement Assistance for Top Skilled Candidates",
+                            "Final Project Presentation & Certification"
+                        ]
+                    }
+                ]
+            },
+            "data-analytics": {
+                title: "Data Analytics",
+                description: "Transform raw data into meaningful insights that drive business decisions. Learn data collection, cleaning, visualization, reporting, and business intelligence tools through hands-on projects and real-world case studies.",
+                duration: "4 Months",
+                level: "Beginner to Intermediate",
+                format: "Offline & Online",
+                placement: "Dedicated placement assistance for top-performing and highly skilled candidates, including resume building, interview preparation, dashboard portfolio creation, and job referrals through our hiring network.",
+                capstone: "Business Intelligence Dashboard & Sales Analytics Project",
+                tools: [
+                    "Microsoft Excel",
+                    "Advanced Excel",
+                    "SQL",
+                    "Power BI",
+                    "Tableau",
+                    "Python Basics",
+                    "Pandas",
+                    "Google Sheets",
+                    "Statistics",
+                    "MySQL",
+                    "Data Visualization",
+                    "Git & GitHub"
+                ],
+                syllabus: [
+                    {
+                        title: "Module 1: Data Analytics Fundamentals",
+                        content: [
+                            "Introduction to Data Analytics",
+                            "Types of Data & Business Analytics",
+                            "Data Collection Methods",
+                            "Data Cleaning & Preparation",
+                            "Business Problem Solving",
+                            "Analytics Lifecycle"
+                        ]
+                    },
+                    {
+                        title: "Module 2: Advanced Excel for Data Analysis",
+                        content: [
+                            "Excel Fundamentals",
+                            "Formulas & Functions",
+                            "Pivot Tables & Pivot Charts",
+                            "Data Validation",
+                            "Dashboard Creation",
+                            "Business Reporting Techniques"
+                        ]
+                    },
+                    {
+                        title: "Module 3: SQL for Data Analytics",
+                        content: [
+                            "Database Fundamentals",
+                            "SQL Queries & Joins",
+                            "Filtering & Sorting Data",
+                            "Aggregate Functions",
+                            "Subqueries & Views",
+                            "Real-World Data Analysis Using SQL"
+                        ]
+                    },
+                    {
+                        title: "Module 4: Data Visualization & Business Intelligence",
+                        content: [
+                            "Data Visualization Principles",
+                            "Power BI Fundamentals",
+                            "Interactive Dashboard Development",
+                            "Tableau Fundamentals",
+                            "KPI & Performance Reporting",
+                            "Data Storytelling Techniques"
+                        ]
+                    },
+                    {
+                        title: "Module 5: Python for Data Analytics",
+                        content: [
+                            "Python Basics",
+                            "NumPy Fundamentals",
+                            "Pandas for Data Analysis",
+                            "Data Cleaning & Transformation",
+                            "Exploratory Data Analysis (EDA)",
+                            "Visualization with Matplotlib"
+                        ]
+                    },
+                    {
+                        title: "Module 6: Industry Capstone & Career Preparation",
+                        content: [
+                            "End-to-End Analytics Project",
+                            "Business Case Study Analysis",
+                            "Dashboard Portfolio Development",
+                            "Resume Building & LinkedIn Optimization",
+                            "Mock Interviews & Aptitude Preparation",
+                            "Placement Assistance for Top Skilled Candidates",
+                            "Final Project Presentation & Certification"
+                        ]
+                    }
+                ]
+            },
+            "cyber-security": {
+                title: "Cyber Security",
+                description: "Build the skills needed to protect organizations from cyber threats and security breaches. Learn ethical hacking, network security, vulnerability assessment, penetration testing, cloud security, and security operations through practical labs and real-world simulations.",
+                duration: "6 Months",
+                level: "Beginner to Advanced",
+                format: "Offline & Online",
+                capstone: "Enterprise Security Assessment & Penetration Testing Project",
+                tools: [
+                    "Kali Linux",
+                    "Wireshark",
+                    "Nmap",
+                    "Burp Suite",
+                    "Metasploit",
+                    "OWASP ZAP",
+                    "Nessus",
+                    "Splunk",
+                    "Linux",
+                    "Windows Security",
+                    "AWS Security",
+                    "Microsoft Defender",
+                    "SIEM Tools",
+                    "Git & GitHub"
+                ],
+                syllabus: [
+                    {
+                        title: "Module 1: Cyber Security Fundamentals",
+                        content: [
+                            "Introduction to Cyber Security",
+                            "Information Security Concepts",
+                            "Cyber Threats & Attack Vectors",
+                            "Networking Fundamentals",
+                            "TCP/IP, DNS, HTTP & HTTPS",
+                            "Security Best Practices"
+                        ]
+                    },
+                    {
+                        title: "Module 2: Network Security & System Security",
+                        content: [
+                            "Network Architecture & Security",
+                            "Firewalls & Intrusion Detection Systems",
+                            "Linux Security Fundamentals",
+                            "Windows Security Management",
+                            "Access Control & Authentication",
+                            "Security Hardening Techniques"
+                        ]
+                    },
+                    {
+                        title: "Module 3: Ethical Hacking & Penetration Testing",
+                        content: [
+                            "Ethical Hacking Methodology",
+                            "Footprinting & Reconnaissance",
+                            "Vulnerability Assessment",
+                            "Network Penetration Testing",
+                            "Web Application Security Testing",
+                            "Wireless Security Testing"
+                        ]
+                    },
+                    {
+                        title: "Module 4: Web Application & Cloud Security",
+                        content: [
+                            "OWASP Top 10 Vulnerabilities",
+                            "SQL Injection & Cross-Site Scripting (XSS)",
+                            "Secure Coding Principles",
+                            "AWS Cloud Security Fundamentals",
+                            "Identity & Access Management (IAM)",
+                            "Cloud Security Best Practices"
+                        ]
+                    },
+                    {
+                        title: "Module 5: Security Operations & Incident Response",
+                        content: [
+                            "Security Information and Event Management (SIEM)",
+                            "Log Monitoring & Analysis",
+                            "Threat Intelligence",
+                            "Incident Detection & Response",
+                            "Malware Analysis Fundamentals",
+                            "Digital Forensics Basics"
+                        ]
+                    },
+                    {
+                        title: "Module 6: Industry Capstone & Career Preparation",
+                        content: [
+                            "Real-World Security Assessment Project",
+                            "Vulnerability Assessment Report Creation",
+                            "Security Audit & Compliance Basics",
+                            "Resume Building & LinkedIn Optimization",
+                            "Mock Interviews & Certification Guidance",
+                            "Placement Assistance for Top Skilled Candidates",
+                            "Final Project Presentation & Certification"
+                        ]
+                    }
+                ]
+            },
+            "full-stack": {
+                title: "Full Stack Development",
+                description: "Become a job-ready Full Stack Developer by mastering front-end and back-end technologies used to build modern web applications. Learn to design, develop, deploy, and maintain scalable applications through hands-on projects and real-world development practices.",
+                duration: "6 Months",
+                level: "Beginner to Advanced",
+                format: "Offline & Online",
+                capstone: "Enterprise Web Application & E-Commerce Platform Development",
+                tools: [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript (ES6+)",
+                    "Bootstrap",
+                    "React.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "MySQL",
+                    "REST APIs",
+                    "Git & GitHub",
+                    "Postman",
+                    "Docker",
+                    "AWS",
+                    "VS Code"
+                ],
+                syllabus: [
+                    {
+                        title: "Module 1: Front-End Development Fundamentals",
+                        content: [
+                            "Introduction to Web Development",
+                            "HTML5 Structure & Semantic Elements",
+                            "CSS3 Styling & Responsive Design",
+                            "Bootstrap Framework",
+                            "JavaScript Fundamentals",
+                            "DOM Manipulation & Event Handling"
+                        ]
+                    },
+                    {
+                        title: "Module 2: Advanced Front-End Development",
+                        content: [
+                            "Modern JavaScript (ES6+)",
+                            "React.js Fundamentals",
+                            "Components, Props & State Management",
+                            "React Hooks",
+                            "React Router",
+                            "Building Interactive User Interfaces"
+                        ]
+                    },
+                    {
+                        title: "Module 3: Back-End Development with Node.js",
+                        content: [
+                            "Introduction to Server-Side Development",
+                            "Node.js Fundamentals",
+                            "Express.js Framework",
+                            "RESTful API Development",
+                            "Authentication & Authorization",
+                            "API Testing using Postman"
+                        ]
+                    },
+                    {
+                        title: "Module 4: Database Management",
+                        content: [
+                            "Database Design Principles",
+                            "MySQL Fundamentals",
+                            "MongoDB & NoSQL Concepts",
+                            "CRUD Operations",
+                            "Database Integration with Applications",
+                            "Data Security Best Practices"
+                        ]
+                    },
+                    {
+                        title: "Module 5: Full Stack Application Development",
+                        content: [
+                            "MERN Stack Architecture",
+                            "Connecting Front-End & Back-End",
+                            "User Authentication Systems",
+                            "File Upload & Storage",
+                            "Payment Gateway Integration",
+                            "Real-Time Applications"
+                        ]
+                    },
+                    {
+                        title: "Module 6: Deployment, Capstone & Career Preparation",
+                        content: [
+                            "Git & GitHub Version Control",
+                            "Docker Fundamentals",
+                            "AWS Deployment Basics",
+                            "Performance Optimization",
+                            "Resume Building & LinkedIn Optimization",
+                            "Mock Interviews & Coding Challenges",
+                            "Placement Assistance for Top Skilled Candidates",
+                            "Final Project Presentation & Certification"
+                        ]
+                    }
+                ]
+            },
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Dynamic Particles in Hero Section
+            initHeroParticles();
+
+            // 2. Navbar Scroll Behavior
+            initNavbarScroll();
+
+            // 3. Dynamic Course Tabs Selector
+            initCourseSelector();
+
+            // 4. Counters Animation (Intersection Observer)
+            initStatsCounters();
+
+            // 5. Scroll Animations (Intersection Observer)
+            initScrollAnimations();
+
+            // 6. FAQs Accordion
+            initFAQs();
+
+            // 7. Consultation Form & Validation
+            initConsultationForm();
+        });
+
+        /* ==========================================================================
+           1. Dynamic Particles in Hero Section
+           ========================================================================== */
+        function initHeroParticles() {
+            const container = document.querySelector(".hero-particles");
+            if (!container) return;
+
+            const particleCount = 25;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement("div");
+                particle.classList.add("hero-particle");
+
+                // Randomize dimensions, offsets, animations
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+
+                const duration = Math.random() * 12 + 8; // 8s to 20s
+                const delay = Math.random() * 8; // 0s to 8s
+                particle.style.animation = `floatParticle ${duration}s infinite linear`;
+                particle.style.animationDelay = `-${delay}s`;
+
+                container.appendChild(particle);
+            }
+        }
+
+        /* ==========================================================================
+           2. Navbar Scroll Behavior
+           ========================================================================== */
+        function initNavbarScroll() {
+            const navbar = document.querySelector(".custom-navbar");
+            if (!navbar) return;
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+                // Close mobile nav on scroll
+                var navCollapse = document.getElementById("navbarNav");
+                if (navCollapse && navCollapse.classList.contains("show")) {
+                    navCollapse.classList.remove("show");
+                    var menuIcon = document.getElementById("menuIcon");
+                    if (menuIcon) {
+                        menuIcon.classList.remove("bi-x-lg");
+                        menuIcon.classList.add("bi-list");
+                    }
+                    var toggler = document.querySelector('.navbar-toggler');
+                    if (toggler) toggler.classList.add('collapsed');
+                }
+            });
+        }
+
+        /* ==========================================================================
+           3. Dynamic Course Tabs Selector
+           ========================================================================== */
+        function initCourseSelector() {
+            const tabButtons = document.querySelectorAll(".course-tab-btn");
+            const pane = document.getElementById("activeCoursePane");
+
+            if (tabButtons.length === 0 || !pane) return;
+
+            // Helper function to update contents of course pane
+            function updateCoursePane(courseKey) {
+                const data = coursesData[courseKey];
+                if (!data) return;
+
+                // Animate fade-out first
+                pane.style.opacity = 0;
+                pane.style.transform = "translateY(15px)";
+
+                setTimeout(() => {
+                    // Update Title & Desc
+                    pane.querySelector(".pane-title").innerText = data.title;
+                    pane.querySelector(".pane-desc").innerText = data.description;
+
+                    // Update Meta details
+                    pane.querySelector(".pane-duration").innerText = data.duration;
+                    pane.querySelector(".pane-level").innerText = data.level;
+                    pane.querySelector(".pane-format").innerText = data.format;
+                    pane.querySelector(".pane-capstone").innerText = data.capstone;
+
+                    // Update tools badges
+                    const toolsContainer = pane.querySelector(".pane-tools-list");
+                    toolsContainer.innerHTML = "";
+                    data.tools.forEach(tool => {
+                        const badge = document.createElement("span");
+                        badge.classList.add("tool-badge");
+                        badge.innerText = tool;
+                        toolsContainer.appendChild(badge);
+                    });
+
+                    // Update syllabus accordion
+                    const accordionContainer = pane.querySelector(".pane-syllabus-accordion");
+                    accordionContainer.innerHTML = "";
+
+                    data.syllabus.forEach((module, index) => {
+                        const item = document.createElement("div");
+                        item.classList.add("accordion-item");
+
+                        const headerId = `heading-mod-${index}`;
+                        const collapseId = `collapse-mod-${index}`;
+
+                        item.innerHTML = `
+                    <h2 class="accordion-header" id="${headerId}">
+                        <button class="accordion-button ${index === 0 ? "" : "collapsed"}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${index === 0 ? "true" : "false"}" aria-controls="${collapseId}">
+                            ${module.title}
+                        </button>
+                    </h2>
+                    <div id="${collapseId}" class="accordion-collapse collapse ${index === 0 ? "show" : ""}" aria-labelledby="${headerId}" data-bs-parent=".pane-syllabus-accordion">
+                        <div class="accordion-body">
+                            <ul class="syllabus-topic-list">
+                                ${module.content.map(topic => `<li>${topic}</li>`).join("")}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                        accordionContainer.appendChild(item);
+                    });
+
+                    // Animate fade-in
+                    pane.style.opacity = 1;
+                    pane.style.transform = "translateY(0)";
+                }, 300);
+            }
+
+            // Cross-page nav: select course from URL hash
+            function selectCourseFromHash() {
+                var raw = window.location.hash.replace('#', '');
+                var course = raw || 'ai-ml';
+                var btn = document.querySelector(`.course-tab-btn[data-course="${course}"]`);
+                if (!btn) { course = 'ai-ml'; btn = document.querySelector('.course-tab-btn[data-course="ai-ml"]'); }
+                tabButtons.forEach(function(b) { b.classList.remove("active"); });
+                btn.classList.add("active");
+                updateCoursePane(course);
+                if (raw) {
+                    setTimeout(function() {
+                        var el = document.getElementById('course-explorer');
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 400);
+                }
+                console.log('[Gensar] course=' + course + ' raw=' + raw);
+            }
+            selectCourseFromHash();
+            window.addEventListener('hashchange', selectCourseFromHash);
+
+            // Add click event listeners to tabs
+            tabButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    tabButtons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const targetCourse = btn.getAttribute("data-course");
+                    updateCoursePane(targetCourse);
+                    history.replaceState(null, '', '#' + targetCourse);
+                });
+            });
+
+            // Handle course select from external triggers (like the navbar dropdown links)
+            const externalTriggers = document.querySelectorAll("[data-course-select]");
+            externalTriggers.forEach(trigger => {
+                trigger.addEventListener("click", function (e) {
+                    // If this link navigates to the same page with a hash, prevent navigation
+                    var href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        var courseKey = this.getAttribute('data-course-select');
+                        var targetBtn = document.querySelector(`.course-tab-btn[data-course="${courseKey}"]`);
+                        if (targetBtn) targetBtn.click();
+                        // Scroll to the course explorer section
+                        var explorerSection = document.getElementById('course-explorer');
+                        if (explorerSection) {
+                            explorerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                        // Close the dropdown menu
+                        var dd = this.closest('.dropdown-menu');
+                        if (dd) {
+                            dd.classList.remove('show');
+                            var parent = dd.closest('.dropdown');
+                            if (parent) parent.classList.remove('show');
+                            var toggle = parent ? parent.querySelector('.dropdown-toggle') : null;
+                            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+        }
+
+        /* ==========================================================================
+           4. Counters Animation (Intersection Observer)
+           ========================================================================== */
+        function initStatsCounters() {
+            const counters = document.querySelectorAll(".stat-number");
+            if (counters.length === 0) return;
+
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: "0px"
+            };
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute("data-target"), 10);
+                        const duration = 2000; // 2 seconds animation
+                        const startTime = performance.now();
+
+                        function updateCount(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+
+                            // Easing function (easeOutQuad)
+                            const easeProgress = progress * (2 - progress);
+                            const currentCount = Math.floor(easeProgress * target);
+
+                            // Handle suffix (e.g., '+', '%')
+                            const suffix = counter.getAttribute("data-suffix") || "";
+                            counter.innerText = currentCount + suffix;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.innerText = target + suffix;
+                            }
+                        }
+
+                        requestAnimationFrame(updateCount);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        }
+
+        /* ==========================================================================
+           5. Scroll Animations (Intersection Observer)
+           ========================================================================== */
+        function initScrollAnimations() {
+            const animElements = document.querySelectorAll(".animate-on-scroll");
+            if (animElements.length === 0) return;
+
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px"
+            };
+
+            const animObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animated");
+                    }
+                });
+            }, observerOptions);
+
+            animElements.forEach(el => {
+                animObserver.observe(el);
+            });
+        }
+
+        /* ==========================================================================
+           6. FAQs Accordion
+           ========================================================================== */
+        function initFAQs() {
+            // Relying on Bootstrap 5 native data-bs attributes for accordions.
+        }
+
+        /* ==========================================================================
+           7. Consultation Form & Validation
+           ========================================================================== */
+        function initConsultationForm() {
+            const form = document.getElementById("consultationForm");
+            const successOverlay = document.getElementById("formSuccessOverlay");
+            const overlayClose = document.getElementById("overlayCloseBtn");
+
+            if (!form || !successOverlay) return;
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const nameInput = document.getElementById("fullName");
+                const emailInput = document.getElementById("emailAddr");
+                const phoneInput = document.getElementById("phoneNum");
+                const qualSelect = document.getElementById("qualification");
+                const courseSelect = document.getElementById("interestCourse");
+                const modeSelect = document.getElementById("learningMode");
+                const collegeInput = document.getElementById("collegeName");
+                const agreeCheck = document.getElementById("agreeCheck");
+
+                const nameError = document.getElementById("fullNameError");
+                const emailError = document.getElementById("emailAddrError");
+                const phoneError = document.getElementById("phoneNumError");
+                const qualError = document.getElementById("qualificationError");
+                const courseError = document.getElementById("interestCourseError");
+                const modeError = document.getElementById("learningModeError");
+                const collegeError = document.getElementById("collegeNameError");
+                const agreeError = document.getElementById("agreeCheckError");
+
+                let isValid = true;
+
+                // Reset
+                const allInputs = [nameInput, emailInput, phoneInput, qualSelect, courseSelect, modeSelect, collegeInput];
+                allInputs.forEach(input => {
+                    if (input) {
+                        input.classList.remove("error");
+                    }
+                });
+                const errorSpans = [nameError, emailError, phoneError, qualError, courseError, modeError, collegeError, agreeError];
+                errorSpans.forEach(span => {
+                    if (span) span.textContent = "";
+                });
+                const checkboxBox = document.querySelector(".checkbox-box");
+                if (checkboxBox) checkboxBox.style.borderColor = "";
+
+                // Full Name
+                const nameRegex = /^[a-zA-Z\s.'-]+$/;
+                if (!nameInput.value.trim()) {
+                    nameError.textContent = "Please enter your full name";
+                    nameInput.classList.add("error");
+                    isValid = false;
+                } else if (!nameRegex.test(nameInput.value.trim())) {
+                    nameError.textContent = "Please enter a valid name (letters only)";
+                    nameInput.classList.add("error");
+                    isValid = false;
+                }
+
+                // Email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailInput.value.trim()) {
+                    emailError.textContent = "Please enter your email address";
+                    emailInput.classList.add("error");
+                    isValid = false;
+                } else if (!emailRegex.test(emailInput.value.trim())) {
+                    emailError.textContent = "Please enter a valid email address";
+                    emailInput.classList.add("error");
+                    isValid = false;
+                }
+
+                // Phone
+                const phoneClean = phoneInput.value.trim().replace(/[\s\-\(\)]/g, '');
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneInput.value.trim()) {
+                    phoneError.textContent = "Please enter your phone number";
+                    phoneInput.classList.add("error");
+                    isValid = false;
+                } else if (!phoneRegex.test(phoneClean)) {
+                    phoneError.textContent = "Please enter a valid 10-digit phone number";
+                    phoneInput.classList.add("error");
+                    isValid = false;
+                }
+
+                // Qualification
+                if (!qualSelect.value) {
+                    qualError.textContent = "Please select your qualification";
+                    qualSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                // Course of Interest
+                if (!courseSelect.value) {
+                    courseError.textContent = "Please select a course of interest";
+                    courseSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                // Learning Mode
+                if (!modeSelect.value) {
+                    modeError.textContent = "Please select your preferred learning mode";
+                    modeSelect.classList.add("error");
+                    isValid = false;
+                }
+
+                // College Name
+                const collegeRegex = /^[a-zA-Z0-9\s.\-&',()]+$/;
+                if (collegeInput && collegeInput.value.trim() && !collegeRegex.test(collegeInput.value.trim())) {
+                    collegeError.textContent = "Please enter a valid college name";
+                    collegeInput.classList.add("error");
+                    isValid = false;
+                } else if (collegeError) {
+                    collegeError.textContent = "";
+                }
+
+                // Checkbox
+                if (agreeCheck && !agreeCheck.checked) {
+                    agreeError.textContent = "Please accept the agreement";
+                    if (checkboxBox) {
+                        checkboxBox.style.borderColor = "#ff4d4f";
+                    }
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    var firstErr = form.querySelector('.error');
+                    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                if (isValid) {
+                    const ok = await submitFormToAPI({
+                        formType: 'consultation',
+                        data: {
+                            fullName: nameInput.value.trim(),
+                            emailAddr: emailInput.value.trim(),
+                            phoneNum: phoneInput.value.trim(),
+                            qualification: qualSelect.value,
+                            interestCourse: courseSelect.value,
+                            learningMode: modeSelect.value,
+                            collegeName: (document.getElementById("collegeName") || {}).value || '',
+                        }
+                    });
+                    if (ok) {
+                        successOverlay.classList.add("active");
+                        form.reset();
+                        setTimeout(function () { successOverlay.classList.remove("active"); }, 3000);
+                    }
+                }
+            });
+
+            if (overlayClose) {
+                overlayClose.addEventListener("click", () => {
+                    successOverlay.classList.remove("active");
+                });
+            }
+        }
+        /* ==========================================================================
+           8. Duplicate form handler removed (merged into initConsultationForm)
+           ========================================================================== */
+    </script>
+    <script>
+        var GC_API = window.location.origin + '/api/public';
+        document.addEventListener('DOMContentLoaded', async function () {
+
+        });
+    </script>
+    <div class="scroll-progress" id="scrollProgress">
+        <svg viewBox="0 0 40 40">
+            <circle class="progress-bg" cx="20" cy="20" r="17" />
+            <circle class="progress-fill" id="progressFill" cx="20" cy="20" r="17" />
+        </svg>
+    </div>
+    <a href="https://wa.me/919121912138?text=Hi%20Gensar%20Group%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+</body>
+
+</html>
