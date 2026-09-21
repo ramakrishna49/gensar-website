@@ -10,6 +10,33 @@ const nextConfig: NextConfig = {
         source: "/",
         destination: "/index.html",
       },
+      { source: "/about", destination: "/about.html" },
+      { source: "/careers", destination: "/careers.html" },
+      { source: "/our-services", destination: "/our-services.html" },
+      { source: "/gensar-consulting", destination: "/gensar-consulting.html" },
+      { source: "/hire-us", destination: "/hire-us.html" },
+      { source: "/get-in-touch", destination: "/get-in-touch.html" },
+      {
+        source: "/share-your-requirement",
+        destination: "/share-your-requirement.html",
+      },
+      { source: "/privacy-policy", destination: "/privacy-policy.html" },
+      { source: "/terms-conditions", destination: "/terms-conditions.html" },
+      { source: "/cookie-policy", destination: "/cookie-policy.html" },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/:page.html",
+        destination: "/:page",
+        permanent: true,
+      },
     ];
   },
   async headers() {
