@@ -1725,25 +1725,38 @@ body {
 .leader-pill {
     font-size: 0.75rem;
     font-weight: 600;
-    padding: 3px 12px;
-    border-radius: 10px;
+    padding: 5px 14px;
+    border-radius: 999px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+    display: inline-flex;
+    align-self: flex-start;
+    width: fit-content;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    border: 1px solid transparent;
 }
 
 .pill-purple {
-    background: rgba(181, 138, 227, 0.1);
-    color: #b58ae3;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
 }
 
 .pill-blue {
-    background: rgba(158, 180, 242, 0.1);
-    color: #9eb4f2;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
 .pill-peach {
-    background: rgba(234, 181, 150, 0.1);
-    color: #eab596;
+    background: linear-gradient(135deg, #f97316, #c2410c);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+}
+
+.leader-pill:hover {
+    transform: translateY(-2px) scale(1.04);
+    filter: brightness(1.08);
 }
 
 .leader-desc-text {
@@ -7958,8 +7971,49 @@ body.legal-page .footer-premium {
 }
 
 .leader-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.16);
+}
+
+.leader-card:hover .leader-card-head {
+    filter: brightness(1.08);
+}
+
+.leader-card:hover .leader-initials {
+    transform: scale(1.1) rotate(-4deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.leader-initials {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(4px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leader-card .stream-link {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.leader-card .stream-link:hover {
+    color: #a855f7;
+    transform: translateX(2px);
 }
 
 .leader-card-head {
