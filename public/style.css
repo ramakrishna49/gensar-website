@@ -7934,4 +7934,115 @@ body.legal-page .footer-premium {
         padding: 24px;
         border-radius: 16px;
     }
+}/* ==========================================================================
+   LEADERSHIP CARDS (image-free modern design)
+   ========================================================================== */
+.leadership-cards-section {
+    padding: 120px 0;
+    background: #f8f9fc;
+    position: relative;
+    overflow: hidden;
 }
+
+.leader-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leader-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+.leader-card-head {
+    position: relative;
+    padding: 32px 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leader-card-purple .leader-card-head {
+    background: linear-gradient(135deg, #a855f7 0%, #5b21b6 100%);
+}
+.leader-card-blue .leader-card-head {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+}
+.leader-card-slate .leader-card-head {
+    background: linear-gradient(135deg, #64748b 0%, #1e293b 100%);
+}
+
+.leader-initials {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(4px);
+}
+
+.leader-index {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.22);
+    line-height: 1;
+}
+
+.leader-card-body {
+    padding: 24px 28px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.leader-card .leader-name-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 8px;
+}
+
+.leader-card .leader-desc-text {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.65;
+    flex: 1;
+}
+
+.leader-card .leader-links {
+    padding-top: 14px;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    margin-top: auto;
+}
+
+.leader-card .stream-link {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.leader-card .stream-link:hover {
+    color: #a855f7;
+}
+
+@media (max-width: 767.98px) {
+    .leadership-cards-section { padding: 70px 0; }
+    .leader-initials { width: 60px; height: 60px; font-size: 1.3rem; }
+    .leader-index { font-size: 1.8rem; }
+}
+
